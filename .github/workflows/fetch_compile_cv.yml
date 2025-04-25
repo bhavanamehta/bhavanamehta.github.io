@@ -1,4 +1,4 @@
-name: Fetch and Compile CV from Overleaf
+name: Compile CV
 
 on:
   push:
@@ -14,32 +14,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Install Git LFS
-        run: |
-          sudo apt-get install git-lfs
-          git lfs install
-          
-      - name: Clone from Overleaf
-        run: |
-          mkdir -p temp_cv
-          cd temp_cv
-          git clone https://git@git.overleaf.com/658c67e126bf68f22f531e90 .
-          
-      - name: Compile LaTeX document
+      - name: Create assets directory
+        run: mkdir -p assets
+      
+      # Alternative approach - compile from your existing LaTeX files
+      - name: Set up LaTeX
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: temp_cv/main.tex
+          root_file: resume.tex
           working_directory: ./
+          args: -pdf -file-line-error -halt-on-error
           
       - name: Move compiled PDF
         run: |
           mkdir -p assets
-          mv main.pdf assets/Bhavana_Mehta_Resume.pdf
+          cp resume.pdf assets/Bhavana_Mehta_Resume.pdf || echo "No PDF found"
           
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/Bhavana_Mehta_Resume.pdf
-          git commit -m "Update CV from Overleaf" || echo "No changes to commit"
+          git add assets || echo "No assets to add"
+          git commit -m "Update CV" || echo "No changes to commit"
           git push
