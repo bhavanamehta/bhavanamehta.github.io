@@ -1,0 +1,113 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin = 1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+%--------------UNDERLINING---------------
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{3.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%----------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%----------FONT OPTIONS----------
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    {\color{gray}\titlerule}
+    \vspace{2pt}
+    \scshape\raggedright\Large
+}{}{0pt}{}
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-3pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\textbf{#1}\\\textit{\small#3} \hfill \textit{\small #4}}
+\newcommand{\resumeEduSubheading}[5]{\vspace{-2pt}\item\href{#2}{\textbf{#1}}\\\textit{\small#3} \hfill \textit{\small #4} \\\text{\small #5}}
+\newcommand{\resumePubSubheading}[4]{\vspace{-2pt}\item\textbf{#1} {\small #2} \\\small#3 \\ \textit{\small #4}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+{\Huge Bhavana Mehta}\\
+\vspace{2pt}
+\href{https://www.linkedin.com/in/bmehta5/}{\faLinkedin\thinspace bmehta5} $|$
+\href{https://github.com/bhavanamehta5}{\faGithub\thinspace bhavanamehta5} $|$
+\href{https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en}{\faGraduationCap\thinspace Bhavana Mehta (Google Scholar)}
+\section{Education}
+\vspace{-4pt}
+\resumeSubHeadingListStart
+\resumeEduSubheading{University of Pennsylvania}{}{Ph.D., Computer and Information Science}{Sept. 2019 -- Present}{Advisor: Dr. Boon Thau Loo}
+\resumeEduSubheading{Nirma Institute of Technology, India}{}{B.Tech., Electronics \& Communication Engineering}{July 2014 -- May 2018}{}
+\resumeSubHeadingListEnd
+
+\section{Publications}
+\vspace{-4 pt}
+\resumeSubHeadingListStart
+\resumePubSubheading{Adaptive Sharding in Untrusted Environments}{}{\textbf{Bhavana Mehta}, Nupur Baghel, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo}{Submitted to SIGMOD '26}
+\resumePubSubheading{Towards Full Stack Adaptivity in Permissioned Blockchains}{\href{https://dl.acm.org/doi/abs/10.14778/3641204.3641216}{}}{Chenyuan Wu, Mohammad Javad Amiri, Haoyun Qin, \textbf{Bhavana Mehta}, Ryan Marcus, Boon Thau Loo}{VLDB '24}
+\resumePubSubheading{Towards Adaptive Fault-Tolerant Sharded Databases}{\href{https://ceur-ws.org/Vol-3462/AIDB6.pdf}{}}{\textbf{Bhavana Mehta}, Neelesh CA, Prashanth Iyer, Mohammad Javad Amiri, Boon Thau Loo, Ryan Marcus}{AIDB @ VLDB '23}
+\resumePubSubheading{AdaChain: A Learned Adaptive Blockchain}{\href{https://dl.acm.org/doi/abs/10.14778/3594512.3594531}{}}{Chenyuan Wu, \textbf{Bhavana Mehta}, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo}{VLDB '23}
+\resumeSubHeadingListEnd
+
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{University of Pennsylvania}{}{Research Assistant}{Sept 2019 -- Present}
+\resumeItemListStart
+      \resumeItem{Developed scalable, high-performance distributed databases with Byzantine fault tolerance and dynamic adaptation, improving system reliability.}
+      \resumeItem{Designed machine learning-driven adaptive data management techniques optimizing distributed infrastructure at scale.}
+      \resumeItem{Developed scalable blockchain consensus, fault-tolerant sharding architectures, and their applications in large-scale infrastructure.}
+\resumeItemListEnd
+\resumeSubheading{Bluespec Inc., Massachusetts}{}{Design Engineer}{Jan 2018 -- June 2019}
+\resumeItemListStart
+\resumeItem{Architected and optimized RISC-V cores, focusing on pipelining, hazards, and timing closure.}
+\resumeItem{Automated generation and deployment of  500+ RISC-V cores from high-level specifications till chip tape-out, reducing time-to-market.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\section*{Skills}
+\begin{tabular}{@{}l@{\hspace{6pt}}p{4.8in}}
+Languages:       & Python, C/C++, SQL, Verilog, Bash \\
+Frameworks:      & scikit-learn, NumPy, Pandas, PyTorch \\
+Infrastructure:  & Distributed Databases, Blockchain, Sharding, Consensus \\
+Hardware Design: & RISC-V, RTL Design, SoC Integration, Docker, Git \\
+Research Areas:  & ML for Systems, Byzantine Fault Tolerance, Adaptive Infrastructure \\
+\end{tabular}
+\end{document}

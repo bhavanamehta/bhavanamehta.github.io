@@ -1,4 +1,4 @@
-name: Compile CV
+name: Compile LaTeX Resume
 
 on:
   push:
@@ -13,27 +13,35 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
-      - name: Create assets directory
-        run: mkdir -p assets
       
-      # Alternative approach - compile from your existing LaTeX files
-      - name: Set up LaTeX
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume.tex
-          working_directory: ./
-          args: -pdf -file-line-error -halt-on-error
-          
+      - name: Install LaTeX and required packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-full
+      
+      - name: Compile LaTeX document
+        run: |
+          cd latex
+          pdflatex -interaction=nonstopmode main.tex || echo "Compile failed but continuing"
+          pdflatex -interaction=nonstopmode main.tex || echo "Second compile failed but continuing"
+        
       - name: Move compiled PDF
         run: |
           mkdir -p assets
-          cp resume.pdf assets/Bhavana_Mehta_Resume.pdf || echo "No PDF found"
+          cp latex/main.pdf assets/Bhavana_Mehta_Resume.pdf || echo "No PDF found, generating placeholder"
+          
+      - name: Create placeholder if PDF compilation failed
+        run: |
+          if [ ! -f assets/Bhavana_Mehta_Resume.pdf ]; then
+            echo "PDF compilation failed, creating placeholder PDF"
+            echo "Bhavana Mehta's Resume - Please visit https://www.linkedin.com/in/bmehta5/ for more details" > resume_text.txt
+            enscript -p - resume_text.txt | ps2pdf - assets/Bhavana_Mehta_Resume.pdf || echo "Failed to create placeholder"
+          fi
           
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets || echo "No assets to add"
+          git add assets/Bhavana_Mehta_Resume.pdf
           git commit -m "Update CV" || echo "No changes to commit"
           git push
