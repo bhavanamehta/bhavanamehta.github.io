@@ -5,119 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bhavana Mehta</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,700" rel="stylesheet">
+  <!-- Google Fonts for Lora (body) and Lora (headers) -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="profile">
-        <h1>Bhavana Mehta</h1>
-        <p>PhD Student, University of Pennsylvania</p>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#experience">Experience</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <!-- New fixed navigation from the new styles -->
+  <nav id="nav">
+    <div class="wrap">
+      <a href="#" class="logo">Bhavana Mehta</a>
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="hamburger">☰</label>
+      <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="assets/Bhavana_Mehta_Resume.pdf" class="btn">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>I'm a PhD student in Computer and Information Science at the University of Pennsylvania advised by <a href="https://www.cis.upenn.edu/~boonloo/">Dr. Boon Thau Loo</a>. My research focuses on adaptive distributed systems and Byzantine fault-tolerant databases.</p>
-        
-        <p>My work explores how machine learning can optimize system performance and reliability in response to changing workloads and network conditions. I'm particularly interested in adaptive sharding mechanisms for distributed databases and blockchains.</p>
-      </section>
+  <!-- Hero section from the new styles with updated image path -->
+  <section id="hero" class="wrap">
+    <img src="assets/your_photo.jpg" alt="Bhavana Mehta">
+    <div>
+      <h1>Bhavana Mehta</h1>
+      <p class="tag">PhD Student, University of Pennsylvania</p>
+      <p class="primary">My research focuses on adaptive distributed systems, machine learning for systems optimization, and Byzantine fault-tolerant databases.</p>
+    </div>
+  </section>
 
-      <section id="research">
-        <h2>Research</h2>
-        <p>My research interests span distributed systems, machine learning for systems, and Byzantine fault tolerance:</p>
-        
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a PhD student in Computer and Information Science at the University of Pennsylvania advised by <a href="https://www.cis.upenn.edu/~boonloo/">Dr. Boon Thau Loo</a>. My research focuses on adaptive distributed systems and Byzantine fault-tolerant databases.</p>
+      
+      <p>My work explores how machine learning can optimize system performance and reliability in response to changing workloads and network conditions. I'm particularly interested in adaptive sharding mechanisms for distributed databases and blockchains.</p>
+    </section>
+
+    <!-- Updated research section using the list style from test.html instead of grid boxes -->
+    <section id="research">
+      <h2>Research Interests</h2>
+      <p>My research interests span distributed systems, machine learning for systems, and Byzantine fault tolerance:</p>
+      
+      <ul>
+        <li><strong>Adaptive Distributed Databases:</strong> Developing techniques that dynamically adjust partitioning strategies and system configurations in response to changing workloads</li>
+        <li><strong>Machine Learning for Systems:</strong> Using reinforcement learning and other ML approaches to optimize distributed system performance</li>
+        <li><strong>Byzantine Fault Tolerance:</strong> Creating scalable, secure protocols for untrusted environments</li>
+      </ul>
+    </section>
+
+    <!-- Updated publications section with concise but informative listings -->
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      
+      <ul class="pub-list">
+        <li>
+          <strong>Adaptive Sharding in Untrusted Environments</strong>
+          <span class="pub-venue">Submitted to SIGMOD '26</span>
+        </li>
+        <li>
+          <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
+          <span class="pub-venue">VLDB '24</span>
+        </li>
+        <li>
+          <strong>Towards Adaptive Fault-Tolerant Sharded Databases</strong>
+          <span class="pub-venue">AIDB @ VLDB '23</span>
+        </li>
+        <li>
+          <strong>AdaChain: A Learned Adaptive Blockchain</strong>
+          <span class="pub-venue">VLDB '23</span>
+        </li>
+      </ul>
+      
+      <p class="more-pubs">
+        <a href="publications.html" class="btn-small">View Full Publication List</a>
+        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" target="_blank">
+          Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Research Assistant</h3>
+          <p class="date">2019 - Present</p>
+        </div>
+        <p class="place">University of Pennsylvania</p>
         <ul>
-          <li><strong>Adaptive Distributed Databases:</strong> Developing techniques that dynamically adjust partitioning strategies and system configurations in response to changing workloads</li>
-          <li><strong>Machine Learning for Systems:</strong> Using reinforcement learning and other ML approaches to optimize distributed system performance</li>
-          <li><strong>Byzantine Fault Tolerance:</strong> Creating scalable, secure protocols for untrusted environments</li>
+          <li>Developing high-performance distributed databases with Byzantine fault tolerance</li>
+          <li>Applying machine learning techniques to optimize distributed systems</li>
         </ul>
-      </section>
-
-      <section id="publications">
-        <h2>Publications</h2>
-        
-        <div class="publication">
-          <h3>Adaptive Sharding in Untrusted Environments</h3>
-          <p class="authors">Bhavana Mehta, Nupur Baghel, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</p>
-          <p class="venue">Submitted to SIGMOD '26</p>
-        </div>
-        
-        <div class="publication">
-          <h3>Towards Full Stack Adaptivity in Permissioned Blockchains</h3>
-          <p class="authors">Chenyuan Wu, Mohammad Javad Amiri, Haoyun Qin, Bhavana Mehta, Ryan Marcus, Boon Thau Loo</p>
-          <p class="venue">VLDB '24</p>
-          <p class="links"><a href="https://dl.acm.org/doi/abs/10.14778/3641204.3641216" target="_blank">[PDF]</a></p>
-        </div>
-        
-        <div class="publication">
-          <h3>Towards Adaptive Fault-Tolerant Sharded Databases</h3>
-          <p class="authors">Bhavana Mehta, Neelesh CA, Prashanth Iyer, Mohammad Javad Amiri, Boon Thau Loo, Ryan Marcus</p>
-          <p class="venue">AIDB @ VLDB '23</p>
-          <p class="links"><a href="https://ceur-ws.org/Vol-3462/AIDB6.pdf" target="_blank">[PDF]</a></p>
-        </div>
-        
-        <div class="publication">
-          <h3>AdaChain: A Learned Adaptive Blockchain</h3>
-          <p class="authors">Chenyuan Wu, Bhavana Mehta, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</p>
-          <p class="venue">VLDB '23</p>
-          <p class="links"><a href="https://dl.acm.org/doi/abs/10.14778/3594512.3594531" target="_blank">[PDF]</a></p>
-        </div>
-        
-        <p class="more-pubs">
-          <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" target="_blank">Full list on Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i></a>
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        
-        <div class="exp-item">
-          <div class="exp-header">
-            <h3>Research Assistant</h3>
-            <p class="date">2019 - Present</p>
-          </div>
-          <p class="place">University of Pennsylvania</p>
-          <ul>
-            <li>Developing high-performance distributed databases with Byzantine fault tolerance</li>
-            <li>Applying machine learning techniques to optimize distributed systems</li>
-          </ul>
-        </div>
-        
-        <div class="exp-item">
-          <div class="exp-header">
-            <h3>Design Engineer</h3>
-            <p class="date">2018 - 2019</p>
-          </div>
-          <p class="place">Bluespec Inc.</p>
-          <ul>
-            <li>Architected and optimized RISC-V cores</li>
-            <li>Automated deployment of hardware cores from high-level specifications</li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="contact">
-        <a href="mailto:bmehta@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="https://github.com/bhavanamehta5" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
       </div>
-      <p>&copy; 2025 Bhavana Mehta</p>
-    </footer>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Design Engineer</h3>
+          <p class="date">2018 - 2019</p>
+        </div>
+        <p class="place">Bluespec Inc.</p>
+        <ul>
+          <li>Architected and optimized RISC-V cores</li>
+          <li>Automated deployment of hardware cores from high-level specifications</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- New strip component -->
+  <div class="strip">
+    Looking for opportunities in machine learning, distributed systems, and blockchain technology
   </div>
+
+  <footer>
+    <div class="contact">
+      <a href="mailto:bmehta@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://github.com/bhavanamehta5" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+    </div>
+    <p>&copy; 2025 Bhavana Mehta</p>
+  </footer>
 </body>
 </html>

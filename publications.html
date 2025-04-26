@@ -5,107 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications - Bhavana Mehta</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .publication {
-      margin-bottom: 25px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 15px;
-    }
-    .publication:last-child {
-      border-bottom: none;
-    }
-    .publication h3 {
-      margin-bottom: 5px;
-    }
-    .publication .authors {
-      font-style: italic;
-      margin-bottom: 5px;
-    }
-    .publication .venue {
-      font-weight: bold;
-    }
-    .publication .links {
-      margin-top: 8px;
-    }
-    .publication .links a {
-      margin-right: 15px;
-      color: #004785;
-    }
-  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts for Lora (body) and Lora (headers) -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <div class="container">
-      <h1>Bhavana Mehta</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <!-- Fixed navigation matching the main page -->
+  <nav id="nav">
+    <div class="wrap">
+      <a href="index.html" class="logo">Bhavana Mehta</a>
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="hamburger">☰</label>
+      <ul class="menu">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="assets/Bhavana_Mehta_Resume.pdf" class="btn">Resume</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="container">
-    <h2>Publications</h2>
-    
-    <div class="publication">
-      <h3>Adaptive Sharding in Untrusted Environments</h3>
-      <div class="authors">Bhavana Mehta, Nupur Baghel, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</div>
-      <div class="venue">Submitted to SIGMOD '26</div>
-      <div class="description">
-        Novel adaptive sharding techniques for distributed databases in environments with Byzantine failures.
+  <main class="wrap" style="padding-top: 80px;">
+    <section id="publications">
+      <h2>Publications</h2>
+      
+      <div class="publication">
+        <h3>Adaptive Sharding in Untrusted Environments</h3>
+        <p class="authors">Bhavana Mehta, Nupur Baghel, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</p>
+        <p class="venue">Submitted to SIGMOD '26</p>
+        <p>Novel adaptive sharding techniques for distributed databases in environments with Byzantine failures. This work explores how to dynamically adjust sharding strategies in the presence of malicious actors while maintaining system performance and reliability.</p>
       </div>
-    </div>
-    
-    <div class="publication">
-      <h3>Towards Full Stack Adaptivity in Permissioned Blockchains</h3>
-      <div class="authors">Chenyuan Wu, Mohammad Javad Amiri, Haoyun Qin, Bhavana Mehta, Ryan Marcus, Boon Thau Loo</div>
-      <div class="venue">VLDB '24</div>
-      <div class="description">
-        A comprehensive approach to making all layers of the blockchain stack adaptive to changing conditions.
+      
+      <div class="publication">
+        <h3>Towards Full Stack Adaptivity in Permissioned Blockchains</h3>
+        <p class="authors">Chenyuan Wu, Mohammad Javad Amiri, Haoyun Qin, Bhavana Mehta, Ryan Marcus, Boon Thau Loo</p>
+        <p class="venue">VLDB '24</p>
+        <p>A comprehensive approach to making all layers of the blockchain stack adaptive to changing conditions. This research demonstrates how machine learning can be applied across different blockchain components to optimize performance under varying workloads.</p>
+        <p class="links">
+          <a href="https://dl.acm.org/doi/abs/10.14778/3641204.3641216" target="_blank" class="paper-link">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF
+          </a>
+        </p>
       </div>
-      <div class="links">
-        <a href="https://dl.acm.org/doi/abs/10.14778/3641204.3641216" target="_blank">Paper</a>
+      
+      <div class="publication">
+        <h3>Towards Adaptive Fault-Tolerant Sharded Databases</h3>
+        <p class="authors">Bhavana Mehta, Neelesh CA, Prashanth Iyer, Mohammad Javad Amiri, Boon Thau Loo, Ryan Marcus</p>
+        <p class="venue">AIDB @ VLDB '23</p>
+        <p>Novel techniques for making sharded database systems resilient to failures while maintaining adaptivity. This paper presents algorithms that allow database systems to adjust their behavior in response to node failures without sacrificing performance.</p>
+        <p class="links">
+          <a href="https://ceur-ws.org/Vol-3462/AIDB6.pdf" target="_blank" class="paper-link">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF
+          </a>
+        </p>
       </div>
-    </div>
-    
-    <div class="publication">
-      <h3>Towards Adaptive Fault-Tolerant Sharded Databases</h3>
-      <div class="authors">Bhavana Mehta, Neelesh CA, Prashanth Iyer, Mohammad Javad Amiri, Boon Thau Loo, Ryan Marcus</div>
-      <div class="venue">AIDB @ VLDB '23</div>
-      <div class="description">
-        Novel techniques for making sharded database systems resilient to failures while maintaining adaptivity.
+      
+      <div class="publication">
+        <h3>AdaChain: A Learned Adaptive Blockchain</h3>
+        <p class="authors">Chenyuan Wu, Bhavana Mehta, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</p>
+        <p class="venue">VLDB '23</p>
+        <p>A blockchain system that uses machine learning to adapt to changing workloads and network conditions. AdaChain represents a breakthrough in blockchain adaptivity by automatically tuning system parameters to maintain optimal performance as conditions change.</p>
+        <p class="links">
+          <a href="https://dl.acm.org/doi/abs/10.14778/3594512.3594531" target="_blank" class="paper-link">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF
+          </a>
+        </p>
       </div>
-      <div class="links">
-        <a href="https://ceur-ws.org/Vol-3462/AIDB6.pdf" target="_blank">Paper</a>
+      
+      <div class="publication">
+        <h3>High Speed SRT Divider for Intelligent Embedded System</h3>
+        <p class="authors">Bhavana Mehta, Joyeeta Talukdar, Sachin Gajjar</p>
+        <p class="venue">arXiv preprint (2018)</p>
+        <p>This paper presents an optimized implementation of the SRT division algorithm for embedded systems, improving computational efficiency for resource-constrained devices.</p>
+        <p class="links">
+          <a href="https://arxiv.org/abs/2002.06195" target="_blank" class="paper-link">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF
+          </a>
+        </p>
       </div>
-    </div>
-    
-    <div class="publication">
-      <h3>AdaChain: A Learned Adaptive Blockchain</h3>
-      <div class="authors">Chenyuan Wu, Bhavana Mehta, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</div>
-      <div class="venue">VLDB '23</div>
-      <div class="description">
-        A blockchain system that uses machine learning to adapt to changing workloads and network conditions.
+      
+      <div class="publication">
+        <h3>Human action recognition system using good features and multilayer perceptron network</h3>
+        <p class="authors">Joyeeta Talukdar, Bhavana Mehta</p>
+        <p class="venue">International Conference on Communication and Signal Processing (ICCSP) 2017</p>
+        <p>A novel approach to human action recognition using optimized feature extraction techniques and neural networks, achieving high accuracy with computational efficiency.</p>
+        <p class="links">
+          <a href="https://ieeexplore.ieee.org/document/8286861" target="_blank" class="paper-link">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> View on IEEE
+          </a>
+        </p>
       </div>
-      <div class="links">
-        <a href="https://dl.acm.org/doi/abs/10.14778/3594512.3594531" target="_blank">Paper</a>
+      
+      <div style="margin: 30px 0;">
+        <a href="index.html" class="btn-small">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Homepage
+        </a>
       </div>
-    </div>
-    
-    <p style="margin-top: 30px;">
-      <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" class="btn" target="_blank">Full List on Google Scholar</a>
-    </p>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Bhavana Mehta | 
-    <a href="https://linkedin.com/in/bmehta5">LinkedIn</a> | 
-    <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en">Google Scholar</a> |
-    <a href="https://github.com/bhavanamehta5">GitHub</a></p>
+    <div class="contact">
+      <a href="mailto:bmehta@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://github.com/bhavanamehta5" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+    </div>
+    <p>&copy; 2025 Bhavana Mehta</p>
   </footer>
 </body>
 </html>
