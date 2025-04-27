@@ -246,8 +246,7 @@ transition:all .2s;
     font-size:1.05rem;
     padding:18px 0;        /* taller */
 }
-/* one-line opportunity note next to the photo */
-/* opportunity note next to the photo */
+
 .looking {
     margin: .6rem 0 0;
     font-size: 1rem;           /* align with body */
@@ -358,6 +357,18 @@ transition:all .2s;
   text-decoration: none;
 }
 
+.more-pubs .btn-small {
+  background: white;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.more-pubs .btn-small:hover {
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+}
+
 /* Experience - keeping existing styles */
 .exp-item {
   margin-bottom: 2rem;
@@ -424,6 +435,7 @@ footer {
   .wrapper, .wrap {
     padding: 1.5rem;
   }
+  .wrap p { max-width: 42em; }
   
   h1 {
     font-size: 2rem;
@@ -493,4 +505,50 @@ footer {
       width:130px;
       height:130px;
     }
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align all text and icons to left */
+  }
+  
+  .hero-social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 10rem;
+  }
+  
+  .hero-social-icons a {
+    font-size: 1.5rem; /* slightly bigger icons */
+    color: var(--navy); /* match text color */
+    transition: color 0.2s;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--light-bg); /* light background for icons */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* size of the icon */
+    height: 40px; /* size of the icon */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+
+    margin: 0 0.5rem; /* space between icons */
+    text-align: center;
+    line-height: 1; /* center the icon vertically */
+    font-size: 1.5rem; /* icon size */
+    font-weight: 600; /* icon weight */
+    color: var(--navy); /* icon color */
+    text-decoration: none; /* remove underline */
+    background: var(--light-bg); /* light background for icons */
+    border-radius: 50%; /* round shape */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow effect */
+
+    
+
+  }
+  
+  .hero-social-icons a:hover {
+    color: var(--accent-color); /* nice hover color */
   }

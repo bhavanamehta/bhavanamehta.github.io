@@ -11,140 +11,169 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
 </head>
 <body>
-  <!-- New fixed navigation from the new styles -->
-  <nav id="nav">
-    <div class="wrap">
-      <a href="#" class="logo">Bhavana Mehta</a>
-      <input type="checkbox" id="nav-toggle">
-      <label for="nav-toggle" class="hamburger">☰</label>
-      <ul class="menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="assets/Bhavana_Mehta_Resume.pdf" class="btn">Resume</a></li>
-      </ul>
-    </div>
-  </nav>
-      <!-- HERO  (replace the whole block ↓) -->
-      <section id="hero" class="wrap">
-        <img src="assets/your_photo.jpg" alt="Bhavana Mehta">
-
-        <div class="hero-text">
-          <h1>Bhavana Mehta</h1>
-          <p class="tag">Ph.D. Candidate · University of Pennsylvania</p>
-          <p class="primary">
-            My work focuses on machine learning for distributed systems, building adaptive databases, blockchain protocols, and efficient infrastructure systems.
-          </p>
-
-          <p class="looking">
-            <strong>
-              Looking for full-time opportunities in 2025! 
-              Contact me at 
-              <a href="mailto:bhavanam@seas.upenn.edu" target="_blank">bhavanam@seas.upenn.edu</a>
-            </strong>    
-          </p>
-        </div>
-      </section>
-
-  <main class="wrap">
-    <section id="about">
-      <p>
-        I’m a Ph.D. candidate in Computer &amp; Information Science at the
-        University&nbsp;of&nbsp;Pennsylvania, advised by
-        <a href="https://www.cis.upenn.edu/~boonloo/">Prof.&nbsp;Boon&nbsp;Thau&nbsp;Loo</a>
-        &amp; co-advised by
-        <a href="https://www3.cs.stonybrook.edu/~amiri/">Prof.&nbsp;Mohammad&nbsp;Javad&nbsp;Amiri</a> (Stony&nbsp;Brook).
-        I also work closely with
-        <a href="https://www.cis.upenn.edu/~rcmarcus/">
-          Prof.&nbsp;Ryan&nbsp;Marcus</a>.
+<!-- New fixed navigation -->
+<nav id="nav">
+<div class="wrap">
+    <a href="index.html" class="logo">Bhavana Mehta</a>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="hamburger">☰</label>
+    <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="assets/Bhavana_Mehta_Resume.pdf" class="btn">Resume</a></li>
+    </ul>
+</div>
+</nav>
+<section id="hero" class="wrap">
+    <img src="assets/your_photo.jpg" alt="Bhavana Mehta" loading="lazy" class="hero-image">
+  
+    <div class="hero-text">
+      <h1>Bhavana Mehta</h1>
+      <p class="tag">Ph.D. Candidate · University of Pennsylvania</p>
+  
+      <p class="subtag">
+        Distributed Systems · Adaptive Databases · ML for Infrastructure
       </p>
-      
-      <p>My work explores how machine learning can optimize system performance and reliability in response to changing workloads and network conditions. I'm particularly interested in adaptive sharding mechanisms for distributed databases and blockchains.</p>
+        <p class="looking" style="margin-top: 1rem;">
+        Looking for full-time opportunities in 2025! Email me at <a href="mailto:bhavanam@upenn.edu">bhavanam@upenn.edu</a>
+        </p>
+      <div class="hero-social-icons" style="margin-top: 1rem; display: flex; justify-content: center; gap: 10px;">   
+        <a href="mailto:bhavanam@upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/bhavanamehta" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/bhavanamehta" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </section>
+
+<main class="wrap">
+<section id="about">
+    <header><h2>About</h2></header>
+    <p>
+        I am a Ph.D. candidate in Computer & Information Science at the University of Pennsylvania, advised by <a href="https://www.cis.upenn.edu/~boonloo/">Prof. Boon Thau Loo</a> and co-advised by <a href="https://www3.cs.stonybrook.edu/~amiri/">Prof. Mohammad Javad Amiri</a>.
+        I also collaborate closely with <a href="https://www.cis.upenn.edu/~rcmarcus/">Prof. Ryan Marcus</a> on adaptive data management and distributed learning systems.
+    </p>
+    <p>
+        My research focuses on adaptive distributed databases, intelligent blockchains, and machine learning for systems. I have also worked on TCP migration and infrastructure projects at UPenn and Microsoft Research.
+    </p>
     </section>
 
-    <!-- Updated research section using the list style from test.html instead of grid boxes -->
     <section id="research">
-      <h2>Research Interests</h2>
-      <p>My research interests span distributed systems, machine learning for systems, and Byzantine fault tolerance:</p>
-      
-      <ul>
+        <header><h2>Research Interests</h2></header>
+        <p>My research interests span distributed systems, machine learning for systems, and Byzantine fault tolerance:</p>
+        <ul>
         <li><strong>Adaptive Distributed Databases:</strong> Developing techniques that dynamically adjust partitioning strategies and system configurations in response to changing workloads</li>
         <li><strong>Machine Learning for Systems:</strong> Using reinforcement learning and other ML approaches to optimize distributed system performance</li>
         <li><strong>Byzantine Fault Tolerance:</strong> Creating scalable, secure protocols for untrusted environments</li>
-      </ul>
+        </ul>
     </section>
 
-    <!-- Updated publications section with concise but informative listings -->
     <section id="publications">
-      <h2>Selected Publications</h2>
-      
-      <ul class="pub-list">
+        <header><h2>Selected Publications</h2></header>
+        <ul class="pub-list">
         <li>
-          <strong>Adaptive Sharding in Untrusted Environments</strong>
-          <span class="pub-venue">Submitted to SIGMOD '26</span>
+            <strong>Adaptive Sharding in Untrusted Environments</strong>
+            <span class="pub-venue">Submitted to SIGMOD '26</span>
         </li>
         <li>
-          <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
-          <span class="pub-venue">VLDB '24</span>
+            <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
+            <span class="pub-venue">VLDB '24</span>
         </li>
         <li>
-          <strong>Towards Adaptive Fault-Tolerant Sharded Databases</strong>
-          <span class="pub-venue">AIDB @ VLDB '23</span>
+            <strong>Towards Adaptive Fault-Tolerant Sharded Databases</strong>
+            <span class="pub-venue">AIDB @ VLDB '23</span>
         </li>
         <li>
-          <strong>AdaChain: A Learned Adaptive Blockchain</strong>
-          <span class="pub-venue">VLDB '23</span>
+            <strong>AdaChain: A Learned Adaptive Blockchain</strong>
+            <span class="pub-venue">VLDB '23</span>
         </li>
-      </ul>
-      
-      <p class="more-pubs">
+        </ul>
+
+        <p class="more-pubs">
         <a href="publications.html" class="btn-small">View Full Publication List</a>
         <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" target="_blank">
-          Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i>
+            Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i>
         </a>
-      </p>
+        </p>
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
-      
-      <div class="exp-item">
+    <header><h2>Experience</h2></header>
+    
+    <div class="exp-item">
         <div class="exp-header">
-          <h3>Research Assistant</h3>
-          <p class="date">2019 - Present</p>
+        <h3>Research Assistant</h3>
+        <p class="date">2019 - Present</p>
         </div>
         <p class="place">University of Pennsylvania</p>
         <ul>
-          <li>Developing high-performance distributed databases with Byzantine fault tolerance</li>
-          <li>Applying machine learning techniques to optimize distributed systems</li>
+        <li>Conducting research in adaptive distributed databases and machine learning for systems.</li>
+        <li>Worked on TCP migration projects in collaboration with Microsoft Research.</li>
         </ul>
-      </div>
-      
-      <div class="exp-item">
+    </div>
+    
+    <div class="exp-item">
         <div class="exp-header">
-          <h3>Design Engineer</h3>
-          <p class="date">2018 - 2019</p>
+        <h3>Teaching Assistant</h3>
+        <p class="date">2020 - 2024</p>
+        </div>
+        <p class="place">University of Pennsylvania</p>
+        <ul>
+        <li>CIS 471: Computer Architecture (Instructor: Joe Devietti)</li>
+        <li>CIS 548: Operating Systems (Instructor: Boon Thau Loo)</li>
+        </ul>
+    </div>
+    
+    <div class="exp-item">
+        <div class="exp-header">
+        <h3>Undergraduate Research Assistant</h3>
+        <p class="date">2015 - 2018</p>
+        </div>
+        <p class="place">Nirma Institute of Technology</p>
+        <ul>
+        <li>Research in embedded systems, IoT optimization, and human action recognition using deep learning.</li>
+        </ul>
+    </div>
+    
+    <div class="exp-item">
+        <div class="exp-header">
+        <h3>Research Intern</h3>
+        <p class="date">Summer 2017</p>
+        </div>
+        <p class="place">RISE Lab, IIT Madras</p>
+        <ul>
+        <li>Worked on FPGA-based high-speed divider architectures (radix-4 SRT dividers).</li>
+        </ul>
+    </div>
+    
+    <div class="exp-item">
+        <div class="exp-header">
+        <h3>Design Engineer</h3>
+        <p class="date">2018 - 2019</p>
         </div>
         <p class="place">Bluespec Inc.</p>
         <ul>
-          <li>Architected and optimized RISC-V cores</li>
-          <li>Automated deployment of hardware cores from high-level specifications</li>
+        <li>Architected and optimized RISC-V cores with a focus on pipelining and timing closure.</li>
+        <li>Automated deployment of hardware cores from high-level specifications</li>
+        <li>Developed testing frameworks for hardware validation</li>
         </ul>
-      </div>
-    </section>
-  </main>
+    </div>
+    
+      </section>
 
+    </main>
 
-  <footer>
+    <footer>
     <div class="contact">
-      <a href="mailto:bmehta@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://github.com/bhavanamehta5" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-      <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+        <a href="mailto:bmehta@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/bhavanamehta5" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
     </div>
     <p>&copy; 2025 Bhavana Mehta</p>
-  </footer>
+    </footer>
 </body>
 </html>
