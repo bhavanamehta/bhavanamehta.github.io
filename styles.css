@@ -552,3 +552,12 @@ footer {
   .hero-social-icons a:hover {
     color: var(--accent-color); /* nice hover color */
   }
+@media (max-width: 640px) {
+    .hero-text {
+      align-items: center;
+    }
+    
+    .hero-text h1 {
+      font-size: 1.8rem; /* 👈 slightly smaller name */
+    }
+  }
