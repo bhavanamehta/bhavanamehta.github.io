@@ -514,8 +514,12 @@ footer {
   
   .hero-social-icons {
     display: flex;
+    justify-content: center; /* center the icons */
     gap: 25px;
-    margin-top: 10rem;
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
   }
   
   .hero-social-icons a {
@@ -573,7 +577,3 @@ footer {
   }
 }
 
-/* Apply animation */
-.hero-social-icons {
-  animation: fadeInUp 1s ease-out;
-}
