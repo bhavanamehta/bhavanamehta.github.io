@@ -1,7 +1,7 @@
 name: Deploy to eniac
 on:
   push:
-    branches: [ "main" ]   # or "master"
+    branches: [ "main" ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,14 +10,14 @@ jobs:
       - name: Copy key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          echo "${{ secrets.DEPLOY_KEY_WEBSITE }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
       - name: Push to eniac
         uses: appleboy/[email protected]
         with:
           host: eniac.seas.upenn.edu
           username: bhavanam
-          key: ${{ secrets.DEPLOY_KEY }}
+          key: ${{ secrets.DEPLOY_KEY_WEBSITE }}
           script: |
             cd ~/public_html
             ./update_website.sh
