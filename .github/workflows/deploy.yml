@@ -1,27 +1,31 @@
+---
+name: Deploy to eniac
+
+on:
+  push:
+    branches: ["main"
+  workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1 – check out your repo
       - uses: actions/checkout@v4
 
-      # 2 – trust eniac’s host key so SSH won’t ask for confirmation
       - name: Add eniac to known_hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan eniac.seas.upenn.edu >> ~/.ssh/known_hosts
 
-      # 3 – write the private key from the repo secret
       - name: Install deploy key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY_WEBSITE }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
 
-      # 4 – SSH in and run your script
       - name: Run remote deploy script
-        uses: appleboy/ssh-action@v1.2.0        # ONE line, owner/repo@version
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: eniac.seas.upenn.edu
           username: bhavanam
