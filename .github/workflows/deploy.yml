@@ -1,29 +1,23 @@
 ---
 name: Deploy to eniac
-
 on:
   push:
-    branches: ["main"
+    branches: ["main"]
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Add eniac to known_hosts
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan eniac.seas.upenn.edu >> ~/.ssh/known_hosts
-
       - name: Install deploy key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.DEPLOY_KEY_WEBSITE }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-
       - name: Run remote deploy script
         uses: appleboy/ssh-action@v1.2.0
         with:
