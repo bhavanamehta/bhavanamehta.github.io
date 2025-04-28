@@ -558,6 +558,22 @@ footer {
     }
     
     .hero-text h1 {
-      font-size: 1.8rem; /* 👈 slightly smaller name */
+      font-size: 1.8rem;
     }
   }
+  /* Animation for hero social icons */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* move slightly downward */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation */
+.hero-social-icons {
+  animation: fadeInUp 1s ease-out;
+}
