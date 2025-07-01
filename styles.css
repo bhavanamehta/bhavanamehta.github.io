@@ -577,3 +577,60 @@ footer {
   }
 }
 
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    background: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--navy);
+}
+
+.skill-category h4 {
+    color: var(--navy);
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.skill-category p {
+    margin: 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Publication authors styling */
+.pub-authors {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Enhanced publication list styling */
+.pub-list li {
+    margin-bottom: 0.8rem;
+}
+
+.pub-list .pub-venue {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-category {
+        padding: 1rem;
+    }
+}
+
