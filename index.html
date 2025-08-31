@@ -21,6 +21,7 @@
     <label for="nav-toggle" class="hamburger">☰</label>
     <ul class="menu">
     <li><a href="#about">About</a></li>
+    <li><a href="#news">News</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -61,7 +62,7 @@
         I also collaborate closely with <a href="https://www.cis.upenn.edu/~rcmarcus/">Prof. Ryan Marcus</a> on adaptive data management and distributed learning systems.
     </p>
     <p>
-        My research focuses on high-performance distributed databases, intelligent blockchains, and machine learning for systems optimization. I develop algorithms and systems that make data-intensive applications more efficient, adaptive, and reliable—combining rigorous quantitative analysis with practical engineering solutions.
+        My research focuses on distributed systems, scalable BFT consensus/SMR, adaptive sharding, workload-aware/runtime switching, machine learning for systems, and performance engineering. I develop algorithms and systems that make data-intensive applications more efficient, adaptive, and reliable—combining rigorous quantitative analysis with practical engineering solutions.
     </p>
     <p class="looking" style="margin-top: 1rem; font-weight: bold; background: #f0f4ff; padding: 12px; border-radius: 6px; border-left: 4px solid var(--navy);">
       📢 <span style="color: var(--navy);">Currently on the job market!</span> I'm seeking full-time industry positions starting 2025! Please reach out at <a href="mailto:bhavanam@upenn.edu">bhavanam@upenn.edu</a>
@@ -79,32 +80,42 @@
         </ul>
     </section>
 
+    <section id="news">
+        <header><h2>News</h2></header>
+        <div class="news-item">
+            <div class="news-date">December 2024</div>
+            <div class="news-content">
+                🎉 Our paper <strong>"Adaptive Sharding in Untrusted Environments"</strong> has been accepted to <strong>SIGMOD 2026</strong>! This work presents novel algorithms for dynamic database resharding in Byzantine fault-tolerant environments.
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <header><h2>Key Projects</h2></header>
         
         <div class="grid">
             <div class="case">
-                <header>Marlin: Byzantine-Resilient Sharding System</header>
-                <p>Built Byzantine-resilient sharding system with hypergraph partitioning and RL-based resharding agent in Python/Rust; handles 16K TPS under adversarial conditions with ACID guarantees.</p>
-                <small>Technologies: Python, Rust, Reinforcement Learning, Byzantine Fault Tolerance</small>
+                <header>Marlin: Adaptive Sharded Database</header>
+                <p>Adaptive sharded database tolerant to Byzantine faults. Designed hypergraph-guided centralized (KaHyPar-based cut minimization) and key-affinity decentralized resharding atop BFT SMR + BFT-2PC; achieved ~16K TPS under adversarial skew, cut cross-shard coordination ~33%, and scaled to 32 clusters / 160 nodes with stable tail latency.</p>
+                <small>Technologies: BFT SMR, BFT-2PC, KaHyPar, Byzantine Fault Tolerance</small>
             </div>
             
             <div class="case">
-                <header>AdaChain: Adaptive Blockchain Orchestrator</header>
-                <p>Created adaptive blockchain orchestrator using multi-armed bandit algorithms for dynamic pipeline selection; achieved 22% throughput increase and 40% latency reduction.</p>
-                <small>Technologies: Multi-armed Bandits, Blockchain, Performance Optimization</small>
+                <header>AdaChain: Contextual-Bandit Runtime</header>
+                <p>Contextual-bandit runtime that switches transaction paradigms per workload episode; improved committed throughput vs static baselines on skewed workloads while preserving correctness. Implemented state featurization, online training loop, and evaluation harness.</p>
+                <small>Technologies: Multi-Armed Bandits, Transaction Processing, Blockchain, ML for Systems, Reinforcement Learning</small  
             </div>
             
             <div class="case">
-                <header>Capybara: DPDK-based TCP Stack</header>
-                <p>Collaborated with Microsoft Research on DPDK-based TCP stack for 4 µs live-connection migration; wrote C++ and Python modules for seamless data transfer.</p>
-                <small>Technologies: DPDK, C++, Python, TCP Migration, Microsoft Research</small>
+                <header>Kernel-bypass TCP Migration</header>
+                <p>DPDK prototype to reassign active flows; measured ~4 μs migration on commodity servers; analyzed tail-latency and failure-recovery impact.</p>
+                <small>Technologies: DPDK, TCP Migration, Performance Analysis</small>
             </div>
             
             <div class="case">
-                <header>Distributed Training Infrastructure</header>
-                <p>Built distributed training infrastructure from scratch in Rust and Python, working with a team of 5 researchers to handle GPU cluster orchestration across heterogeneous hardware—achieved 30% throughput improvements.</p>
-                <small>Technologies: Rust, Python, GPU Clusters, Infrastructure</small>
+                <header>Experiment Tooling</header>
+                <p>Workload generators, client-side log metrics, one-click cluster bring-up, and CI sanity tests; produced reproducible figures and runbooks.</p>
+                <small>Technologies: CI/CD, Monitoring, Infrastructure Automation</small>
             </div>
         </div>
     </section>
@@ -113,8 +124,8 @@
         <header><h2>Selected Publications</h2></header>
         <ul class="pub-list">
         <li>
-            <strong>Paper on Adaptive Distributed Systems</strong>
-            <span class="pub-venue">Under Submission</span>
+            <strong>Adaptive Sharding in Untrusted Environments</strong>
+            <span class="pub-venue">SIGMOD '26</span>
         </li>
         <li>
             <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
@@ -146,40 +157,38 @@
     
     <div class="exp-item">
         <div class="exp-header">
-        <h3>Graduate Researcher</h3>
-        <p class="date">Sept 2019 - Present</p>
+        <h3>PhD Researcher</h3>
+        <p class="date">2019 - Present</p>
         </div>
-        <p class="place">University of Pennsylvania, Distributed Systems Lab</p>
+        <p class="place">Distributed Systems Lab, University of Pennsylvania</p>
         <ul>
-        <li>Built distributed training infrastructure from scratch in Rust and Python, working with a team of 5 researchers to handle GPU cluster orchestration across heterogeneous hardware—achieved 30% throughput improvements</li>
-        <li>Designed microservices control plane for job scheduling and data staging; scaled the system to 128 nodes with sub-millisecond heartbeat monitoring</li>
-        <li>Set up monitoring stack with Prometheus, Grafana, and OpenTelemetry to track cluster health and job performance; reduced time to detect failures by about 40%</li>
-        <li>Implemented automated fault injection testing for training pipelines under node failures and network partitions; improved system availability to 99.99% uptime</li>
-        <li>Created infrastructure-as-code using Terraform and Kubernetes to provision HPC clusters and cloud resources; reduced cluster setup time from days to 2 hours</li>
+        <li><strong>Marlin:</strong> Adaptive sharded database tolerant to Byzantine faults. Designed hypergraph-guided centralized (KaHyPar-based cut minimization) and key-affinity decentralized resharding atop BFT SMR + BFT-2PC; achieved ~16K TPS under adversarial skew, cut cross-shard coordination ~33%, and scaled to 32 clusters / 160 nodes with stable tail latency. Built rate-limited migration + safety throttles, fault-injection/regression tests, and profiling harnesses.</li>
+        <li><strong>AdaChain:</strong> Contextual-bandit runtime that switches transaction paradigms per workload episode; improved committed throughput vs static baselines on skewed workloads while preserving correctness. Implemented state featurization, online training loop, and evaluation harness.</li>
+        <li><strong>Kernel-bypass TCP migration:</strong> DPDK prototype to reassign active flows; measured ~4 μs migration on commodity servers; analyzed tail-latency and failure-recovery impact.</li>
+        <li><strong>Experiment tooling:</strong> Workload generators, client-side log metrics, one-click cluster bring-up, and CI sanity tests; produced reproducible figures and runbooks.</li>
         </ul>
     </div>
     
     <div class="exp-item">
         <div class="exp-header">
         <h3>Design Engineer</h3>
-        <p class="date">Jan 2018 - Jun 2019</p>
+        <p class="date">2018 - 2019</p>
         </div>
         <p class="place">Bluespec Inc., Boston, MA</p>
         <ul>
-        <li>Built configuration management system in Go for 500+ FPGA build variants with containerized jobs and task queues; improved build throughput by 25%</li>
-        <li>Automated CI/CD pipelines using Jenkins, Ansible, and Docker; reduced manual work in nightly builds by 80%</li>
-        <li>Worked with hardware team on kernel-bypass networking using DPDK for shuffle operations; cut interconnect overhead by 50 µs</li>
+        <li>Tuned RISC-V pipeline/branch predictor for compute workloads; improved IPC by 25% on customer traces.</li>
+        <li>Built Jenkins+Docker CI for 500+ configurable builds; cut release cycle from 2 weeks to 3 days.</li>
         </ul>
     </div>
     
     <div class="exp-item">
         <div class="exp-header">
         <h3>Research Intern</h3>
-        <p class="date">May 2017 - Jul 2017</p>
+        <p class="date">Summer 2017</p>
         </div>
-        <p class="place">RISE Lab, Indian Institute of Technology Madras</p>
+        <p class="place">IIT Madras, RISE Lab, Chennai, India</p>
         <ul>
-        <li>Co-designed FPGA pipeline for 64-bit arithmetic achieving 281ns latency; built simulation framework for validation</li>
+        <li>Prototype implementations for high-speed SRT division and related FPGA arithmetic; explored quotient correction and parallelism trade-offs.</li>
         </ul>
     </div>
     
@@ -190,23 +199,19 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <h4>Languages</h4>
-                <p>Rust, Go, C++, Python, Bash, SQL, Terraform</p>
+                <p>C++, Python, Java, Rust, Bash</p>
             </div>
             <div class="skill-category">
-                <h4>Distributed Systems</h4>
-                <p>Microservices, gRPC, Kafka, Sharding, Consensus Protocols, Load Balancing</p>
+                <h4>Systems</h4>
+                <p>Linux, DPDK, Docker, Jenkins, Git, GitHub Actions, CloudLab</p>
             </div>
             <div class="skill-category">
-                <h4>Infrastructure & Cloud</h4>
-                <p>Kubernetes, Docker, Terraform, AWS, GCP, Linux, DPDK</p>
+                <h4>Distributed/DB</h4>
+                <p>Raft/Paxos, PBFT/HotStuff, 2PC, KaHyPar, YCSB, Jepsen-style testing</p>
             </div>
             <div class="skill-category">
-                <h4>Observability & DevOps</h4>
-                <p>Prometheus, Grafana, OpenTelemetry, Jenkins, CI/CD, Chaos Engineering</p>
-            </div>
-            <div class="skill-category">
-                <h4>Databases</h4>
-                <p>PostgreSQL, Cassandra, Redis, ScyllaDB, Query Optimization</p>
+                <h4>Hardware</h4>
+                <p>Bluespec SystemVerilog, Vivado, Xilinx UltraScale</p>
             </div>
         </div>
     </section>
