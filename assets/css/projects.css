@@ -34,7 +34,10 @@
 }
 
 .project-body { padding:0.9rem 1rem 1.1rem; }
-.project-title { margin:0 0 0.35rem; font-size:1.05rem; color:#111; }
+.project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem; }
+.project-title { margin:0; font-size:1.05rem; color:#111; flex: 1; }
+.project-status { font-size:0.7rem; background:#e8f5e8; color:#2d5a2d; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; margin-left:0.5rem; }
+.project-date { margin:0 0 0.4rem; color:#666; font-size:0.85rem; font-style:italic; }
 .project-desc { margin:0; color:#444; font-size:0.95rem; line-height:1.35; }
 .project-tags { margin-top:0.6rem; }
 .tag { display:inline-block; font-size:0.75rem; background:#edf2ff; color:#1f2d6b; padding:0.22rem 0.45rem; border-radius:6px; margin-right:0.35rem; }

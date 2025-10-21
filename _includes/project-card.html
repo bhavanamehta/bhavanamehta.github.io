@@ -1,16 +1,23 @@
 <article class="project-card">
-  <a class="project-link" href="{{ include.project.url }}" target="_blank" rel="noopener">
+  <a class="project-link" href="{{ include.project.url }}">
     <div class="project-thumb">
       {% if include.project.thumb %}
         <img src="{{ include.project.thumb }}" alt="{{ include.project.title }}">
       {% else %}
-        <!-- fallback PDF icon -->
         <div class="pdf-icon">PDF</div>
       {% endif %}
     </div>
 
     <div class="project-body">
-      <h3 class="project-title">{{ include.project.title }}</h3>
+      <div class="project-header">
+        <h3 class="project-title">{{ include.project.title }}</h3>
+        {% if include.project.status %}
+          <span class="project-status">{{ include.project.status }}</span>
+        {% endif %}
+      </div>
+      {% if include.project.date %}
+        <p class="project-date">{{ include.project.date }}</p>
+      {% endif %}
       <p class="project-desc">{{ include.project.description }}</p>
       {% if include.project.tags %}
       <p class="project-tags">
