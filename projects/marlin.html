@@ -1,23 +1,20 @@
 <article style="max-width:900px;margin:2rem auto;">
   <h1>Marlin: Adaptive Sharded Database</h1>
-  <p class="project-meta">Distributed Systems • Byzantine Fault Tolerance</p>
   
-  <div class="project-content">
-    <h2>Overview</h2>
-    <p>Marlin is an adaptive sharded database system designed to be tolerant to Byzantine faults while providing efficient hypergraph-guided resharding capabilities.</p>
-    
-    <h2>Key Features</h2>
-    <ul>
-      <li>Byzantine fault tolerance in distributed database systems</li>
-      <li>Hypergraph-guided resharding for optimal data distribution</li>
-      <li>Adaptive sharding strategies based on workload patterns</li>
-      <li>High availability and consistency guarantees</li>
-    </ul>
-    
-    <h2>Technical Details</h2>
-    <p>This research project explores novel approaches to database sharding that can adapt to changing workloads while maintaining Byzantine fault tolerance. The system uses hypergraph algorithms to determine optimal shard boundaries and migration strategies.</p>
-    
-    <h2>Research Impact</h2>
-    <p>This work contributes to the field of distributed systems by providing new insights into adaptive database architectures that can maintain consistency and availability in the presence of Byzantine failures.</p>
+  <div style="margin-top: 2rem;">
+    <h2>Abstract</h2>
+    <p style="line-height: 1.6; color: #333;">
+      Marlin is an adaptive sharded database tolerant to Byzantine faults. The system is designed with hypergraph-guided centralized architecture using KaHyPar-based cut minimization and key-affinity decentralized resharding atop BFT SMR and BFT-2PC protocols.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      The system achieves approximately 16,000 transactions per second (TPS) under adversarial skew conditions, cuts cross-shard coordination by approximately 33%, and scales to 32 clusters comprising 160 nodes with stable tail latency. Marlin employs rate-limited migration with safety throttles, comprehensive fault-injection and regression tests, and detailed profiling harnesses to ensure robust performance.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      This research advances distributed database systems by providing a scalable solution for maintaining consistency and availability in Byzantine environments. The adaptive resharding mechanisms enable the system to respond dynamically to changing workload patterns while preserving strong fault tolerance guarantees.
+    </p>
+  </div>
+
+  <div style="margin-top: 3rem;">
+    <p style="color: #666; font-style: italic;">Paper and code coming soon.</p>
   </div>
 </article>
