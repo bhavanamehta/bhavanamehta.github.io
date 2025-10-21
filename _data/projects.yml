@@ -1,0 +1,39 @@
+# Research Projects
+- title: "Marlin: Adaptive Sharded Database"
+  description: "Adaptive sharded database tolerant to Byzantine faults with hypergraph-guided resharding."
+  url: "/projects/marlin.html"
+  thumb: "/assets/img/projects/marlin-thumb.png"
+  tags:
+    - distributed-systems
+    - byzantine-fault-tolerance
+    - database
+    - research
+
+- title: "AdaChain: Contextual-Bandit Runtime"
+  description: "Contextual-bandit runtime that switches transaction paradigms per workload episode."
+  url: "/projects/adachain.html"
+  thumb: "/assets/img/projects/adachain-thumb.png"
+  tags:
+    - machine-learning
+    - blockchain
+    - adaptive-systems
+    - research
+
+- title: "Kernel-bypass TCP Migration"
+  description: "DPDK prototype for ultra-fast TCP flow migration on commodity servers."
+  url: "/projects/tcp-migration.html"
+  thumb: "/assets/img/projects/tcp-thumb.png"
+  tags:
+    - systems
+    - networking
+    - performance
+    - research
+
+- title: "Dissertation"
+  description: "On-going work for my dissertation."
+  url: "/projects/dissertation.html"
+  thumb: "/assets/img/projects/dissertation-thumb.png"
+  tags:
+    - research
+    - pdf
+    - dissertation

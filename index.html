@@ -7,30 +7,25 @@
     <meta name="description" content="Personal website of Bhavana Mehta, Ph.D. Candidate at the University of Pennsylvania specializing in distributed systems, adaptive databases, and ML for infrastructure.">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css?v=4">
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Google Fonts for Lora (body) and Lora (headers) -->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
 </head>
 <body>
-<!-- New fixed navigation -->
 <nav id="nav">
 <div class="wrap">
     <a href="index.html" class="logo">Bhavana Mehta</a>
     <input type="checkbox" id="nav-toggle">
     <label for="nav-toggle" class="hamburger">☰</label>
     <ul class="menu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
+    <li><a href="projects.html">Projects</a></li>
     <li><a href="publications.html">Publications</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="assets/Bhavana_Mehta_Resume.pdf" class="btn">Resume</a></li>
+    <li><a href="resume.html" class="btn">Resume</a></li>
     </ul>
 </div>
 </nav>
 
 <div class="strip big" style="margin-top: 55px;">
-  <strong>🔍 On the Job Market!</strong> Available for full-time positions starting 2025! <a href="mailto:bhavanam@upenn.edu" style="color: white; text-decoration: underline;">Contact me</a>
+  <strong>🔍 On the Job Market!</strong> Available for full-time positions! <a href="mailto:bhavanam@seas.upenn.edu" style="color: white; text-decoration: underline;">Contact me</a>
 </div>
 
 <section id="hero" class="wrap">
@@ -44,11 +39,11 @@
         Distributed Systems · Adaptive Databases · ML for Infrastructure
       </p>
       <div class="hero-social-icons" style="margin-top: 1rem; display: flex; justify-content: center; gap: 10px;">   
-        <a href="mailto:bhavanam@upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="mailto:bhavanam@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
         <a href="https://github.com/bhavanamehta" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/bmehta5" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-        <a href="https://www.seas.upenn.edu/~bhavanam/" title="Website"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        <a href="tel:+14844706475" title="Phone: 484-470-6475"><i class="fa fa-phone" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
@@ -58,7 +53,7 @@
     <header><h2>News</h2></header>
     <div class="news-item">
         <div class="news-content">
-            🎉 Our paper <strong>"Adaptive Sharding in Untrusted Environments"</strong> has been accepted to <strong><a href="https://2026.sigmod.org/" target="_blank">SIGMOD 2026</a></strong>! This work presents novel algorithms for dynamic database resharding in Byzantine fault-tolerant environments.
+            Our paper <strong>"Adaptive Sharding in Untrusted Environments"</strong> has been accepted to <strong><a href="https://2026.sigmod.org/" target="_blank">SIGMOD 2026</a></strong>! This work presents novel algorithms for dynamic database resharding in Byzantine fault-tolerant environments.
         </div>
     </div>
 </section>
@@ -70,10 +65,16 @@
         I also collaborate closely with <a href="https://www.cis.upenn.edu/~rcmarcus/">Prof. Ryan Marcus</a> on adaptive data management and distributed learning systems.
     </p>
     <p>
-        My research focuses on distributed systems, scalable BFT consensus/SMR, adaptive sharding, workload-aware/runtime switching, machine learning for systems, and performance engineering. I develop algorithms and systems that make data-intensive applications more efficient, adaptive, and reliable—combining rigorous quantitative analysis with practical engineering solutions.
+        My research focuses on distributed systems, scalable fault-tolerant consensus, adaptive sharding, workload-aware runtime switching, machine learning for systems, and performance engineering. I develop algorithms and systems that make data-intensive applications more efficient, adaptive, and reliable—combining rigorous quantitative analysis with practical engineering solutions.
+    </p>
+    <p>
+        My work addresses fundamental challenges in maintaining consistency and availability while adapting to changing workloads and system conditions. I combine theoretical analysis with systems implementation to advance the state of distributed computing.
+    </p>
+    <p>
+        Explore my <a href="projects.html">research projects and implementations</a> or my <a href="publications.html">publications</a>.
     </p>
     <p class="looking" style="margin-top: 1rem; font-weight: bold; background: #f0f4ff; padding: 12px; border-radius: 6px; border-left: 4px solid var(--navy);">
-      📢 <span style="color: var(--navy);">Currently on the job market!</span> I'm seeking full-time industry positions starting 2025! Please reach out at <a href="mailto:bhavanam@upenn.edu">bhavanam@upenn.edu</a>
+      📢 <span style="color: var(--navy);">Currently on the job market!</span> I'm seeking full-time industry positions starting 2025! Please reach out at <a href="mailto:bhavanam@seas.upenn.edu">bhavanam@seas.upenn.edu</a>
     </p>
     </section>
 
@@ -88,7 +89,7 @@
         </ul>
     </section>
 
-    <section id="projects">
+    <!-- <section id="projects">
         <header><h2>Key Projects</h2></header>
         
         <div class="grid">
@@ -116,7 +117,7 @@
                 <small>Technologies: CI/CD, Monitoring, Infrastructure Automation</small>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="publications">
         <header><h2>Selected Publications</h2></header>
@@ -124,6 +125,12 @@
         <li>
             <strong>Adaptive Sharding in Untrusted Environments</strong>
             <span class="pub-venue">SIGMOD '26</span>
+            <div class="pub-authors"></div>Bhavana Mehta, Nupur Baghel, Mohammad Javad Amiri, Ryan Marcus, Boon Thau Loo</div>
+            <div class="pub-links">
+                <span class="paper-link">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF coming soon!
+                </span>
+            </div>
         </li>
         <li>
             <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
@@ -141,15 +148,11 @@
             <div class="pub-authors">Chenyuan Wu, Bhavana Mehta, Mohammad J Amiri, Ryan Marcus, Boon Thau Loo</div>
         </li>
         </ul>
-
-        <p class="more-pubs">
-        <a href="publications.html" class="btn-small">View Full Publication List</a>
-        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" target="_blank">
-            Google Scholar <i class="fa fa-external-link" aria-hidden="true"></i>
-        </a>
-        </p>
+        <p><a href="publications.html">View all publications</a></p>
     </section>
 
+    <!-- Experience section commented out - available in resume -->
+    <!--
     <section id="experience">
     <header><h2>Experience</h2></header>
     
@@ -213,18 +216,26 @@
             </div>
         </div>
     </section>
+    -->
 
     </main>
 
     <footer>
     <div class="contact">
-        <a href="mailto:bhavanam@upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="https://github.com/bhavanamehta" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="assets/Bhavana_Mehta_Resume.pdf" title="Resume" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+        <a href="mailto:bhavanam@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/bhavanamehta" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="resume.html" title="Resume"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
     </div>
-    <p>&copy; 2024 Bhavana Mehta</p>
+    <p>&copy; 2025 Bhavana Mehta</p>
     </footer>
+
+    <script>
+        function showPhoneNumber() {
+            const phoneNumber = "484-470-6475";
+            alert("Phone: " + phoneNumber);
+        }
+    </script>
 </body>
 </html>

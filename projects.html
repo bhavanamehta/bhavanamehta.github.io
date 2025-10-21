@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Bhavana Mehta</title>
+  <meta name="description" content="Research projects by Bhavana Mehta, Ph.D. Candidate at the University of Pennsylvania specializing in distributed systems, adaptive databases, and ML for infrastructure.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/projects.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
+</head>
+<body>
+  <nav id="nav">
+    <div class="wrap">
+      <a href="index.html" class="logo">Bhavana Mehta</a>
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="hamburger">☰</label>
+      <ul class="menu">
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="resume.html" class="btn">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<main class="wrap" style="margin-top: 80px;">
+  <section class="projects-intro">
+    <h1>Research Projects</h1>
+    <p>Selected research work in distributed systems, adaptive databases, and machine learning for infrastructure. Click a card to view project details.</p>
+  </section>
+
+  <section class="projects-grid">
+    <article class="project-card">
+      <a class="project-link" href="projects/marlin.html">
+        <div class="project-thumb">
+          <div class="project-icon marlin-icon">
+            <i class="fa fa-database" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Marlin: Adaptive Sharded Database</h3>
+          <p class="project-date">2023-2025</p>
+          <p class="project-desc">Adaptive sharded database tolerant to Byzantine faults with hypergraph-guided resharding.</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card">
+      <a class="project-link" href="projects/adachain.html">
+        <div class="project-thumb">
+          <div class="project-icon adachain-icon">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">AdaChain: Contextual-Bandit Runtime</h3>
+          <p class="project-date">2022-2023</p>
+          <p class="project-desc">Contextual-bandit runtime that switches transaction paradigms per workload episode.</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card">
+      <a class="project-link" href="projects/tcp-migration.html">
+        <div class="project-thumb">
+          <div class="project-icon tcp-icon">
+            <i class="fa fa-exchange" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Kernel-bypass TCP Migration</h3>
+          <p class="project-date">2021-2022</p>
+          <p class="project-desc">DPDK prototype for ultra-fast TCP flow migration on commodity servers.</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="project-card">
+      <a class="project-link" href="projects/dissertation.html">
+        <div class="project-thumb">
+          <div class="project-icon dissertation-icon">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Dissertation</h3>
+          <p class="project-date">2025</p>
+          <p class="project-desc">On-going work for my dissertation.</p>
+          </p>
+        </div>
+      </a>
+    </article>
+  </section>
+</main>
+
+<footer>
+<div class="contact">
+    <a href="mailto:bhavanam@seas.upenn.edu" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    <a href="https://github.com/bhavanamehta" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <a href="https://scholar.google.com/citations?user=IY2DisAAAAAJ&hl=en" title="Google Scholar"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/in/bmehta5/" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a href="resume.html" title="Resume"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</div>
+<p>&copy; 2025 Bhavana Mehta</p>
+</footer>
+
+<style>
+.active {
+  color: #007bff !important;
+  font-weight: 600;
+}
+
+.project-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover .project-icon {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.marlin-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.adachain-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.tcp-icon {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.dissertation-icon {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+</style>
+</body>
+</html>

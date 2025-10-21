@@ -1,6 +1,5 @@
-/* Base Styles */
 :root {
-  --primary-color: #284b9b; /* Original navy blue */
+  --primary-color: #284b9b;
   --accent-color: #3498db;
   --text-color: #333;
   --light-text: #666;
@@ -9,7 +8,7 @@
   --border-color: #e5e7eb;
   --bg: #f9fafb;
   --fg: #333;
-  --navy: #284b9b; /* Original navy blue */
+  --navy: #284b9b;
   --alt: #f3f4f6;
 }
 
@@ -30,7 +29,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Typography */
 h1, h2 {
   font-family: 'Lora', sans-serif;
   font-weight: 600;
@@ -82,7 +80,6 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Helpers */
 .wrapper, .wrap {
   max-width: 920px;
   margin: 0 auto;
@@ -109,7 +106,6 @@ li {
   text-decoration: none;
 }
 
-/* Navigation - Fixed Nav from new styles */
 #nav {
   position: fixed;
   top: 0;
@@ -118,44 +114,41 @@ li {
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
   z-index: 100;
-  padding-top:6px;          /* ← new space above links */
-  padding-bottom:6px;       /* keep bar symmetrical */
+  padding-top:6px;
+  padding-bottom:6px;
 }
 
 #nav .wrap{
 max-width:920px;
 margin:0 auto;
-height:44px;                       /* single reference height */
+height:44px;
 display:flex;
 justify-content:space-between;
-align-items:center;                /* ← vertical centring */
-  padding:30px 32px;   /* 22px old  +10px extra */
+align-items:center;
+  padding:30px 32px;
 }
 
-/* LOGO */
 .logo{
-display:flex;                      /* makes the anchor itself a flex container */
-align-items:center;                /* centres its text vertically */
-height:56px;                       /* exactly the bar height */
-line-height:1;                     /* kill font baseline offset */
+display:flex;
+align-items:center;
+height:56px;
+line-height:1;
 font-size:1.5rem;
 font-weight:600;
 color:var(--navy);
-margin:0;                          /* ensure no stray margin */
+margin:0;
 }
-h1.logo, .logo h1{margin:0;}   /* <── add this extra guard */
-/* MENU */
+h1.logo, .logo h1{margin:0;}
 .menu{
 list-style:none;
 display:flex;
 gap:26px;
-margin:0;                          /* remove default ul margin */
+margin:0;
 padding:0;
-align-items:center;/* optional, also safe */
+align-items:center;
 }
 .menu li{margin:0;}
 
-/* make EVERY link block fill the nav height */
 .menu a{
 display:flex;
 align-items:center;
@@ -166,20 +159,16 @@ font-weight:600;
 text-decoration:none;
 }
 
-/* Resume pill */
 .menu .btn{
 background:#fff;color:var(--navy);
 border:2px solid var(--navy);
-padding:0 18px;                    /* horizontal only */
+padding:0 18px;
 border-radius:22px;
 transition:all .2s;
 }
 .menu .btn:hover{background:var(--navy);color:#fff}
 
-/* Hamburger unchanged … */
 .hamburger{display:none}
-/* (your responsive rules continue) */
-
 
 .hamburger {
   display: none;
@@ -191,7 +180,6 @@ transition:all .2s;
   display: none;
 }
 
-/* Hero Section */
 #hero {
   display: flex;
   align-items: center;
@@ -227,12 +215,10 @@ transition:all .2s;
   font-size: 1.05rem;
 }
 
-/* About */
 #about p {
   max-width: 760px;
 }
 
-/* Strip */
 .strip {
   background: #4a5a90;
   color: #fff;
@@ -241,20 +227,18 @@ transition:all .2s;
   margin: 1.5rem 0;
   border-radius: 6px;
 }
-/* styles.css */
 .strip.big{
     font-size:1.05rem;
-    padding:18px 0;        /* taller */
+    padding:18px 0;
 }
 
 .looking {
     margin: .6rem 0 0;
-    font-size: 1rem;           /* align with body */
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--navy);         /* use your existing navy blue */
+    color: var(--navy);
   }
   
-/* Cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -286,7 +270,6 @@ transition:all .2s;
   color: #666;
 }
 
-/* Publications - keeping existing styles */
 .publication {
   margin-bottom: 1.8rem;
 }
@@ -317,7 +300,6 @@ transition:all .2s;
   font-size: 0.95rem;
 }
 
-/* Simplified Publication List */
 .pub-list {
   list-style-type: none;
   margin-left: 0;
@@ -369,7 +351,6 @@ transition:all .2s;
   text-decoration: none;
 }
 
-/* Experience - keeping existing styles */
 .exp-item {
   margin-bottom: 2rem;
 }
@@ -400,7 +381,6 @@ transition:all .2s;
   margin-left: 1.2rem;
 }
 
-/* Contact */
 #contact a {
   color: var(--navy);
   text-decoration: none;
@@ -410,7 +390,6 @@ transition:all .2s;
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 30px 0 40px;
@@ -430,7 +409,6 @@ footer {
   color: var(--primary-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .wrapper, .wrap {
     padding: 1.5rem;
@@ -449,7 +427,6 @@ footer {
     margin-bottom: 0.2rem;
   }
   
-  /* Hamburger menu from new CSS */
   .hamburger {
     display: block;
   }
@@ -490,16 +467,14 @@ footer {
     margin: 0.3rem 0;
   }
 }
-/* profile photo circle  –– desktop size */
 #hero img{
-    width:200px;          /* was 140px */
-    height:200px;         /* keep square */
+    width:200px;
+    height:200px;
     border-radius:50%;
     object-fit:cover;
     flex-shrink:0;
   }
   
-  /* optional: scale down on small screens */
   @media (max-width:640px){
     #hero img{
       width:130px;
@@ -509,12 +484,12 @@ footer {
   .hero-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* align all text and icons to left */
+    align-items: flex-start;
   }
   
   .hero-social-icons {
     display: flex;
-    justify-content: center; /* center the icons */
+    justify-content: center;
     gap: 25px;
     margin-top: 1rem;
     animation: fadeInUp 1s ease-out;
@@ -523,38 +498,38 @@ footer {
   }
   
   .hero-social-icons a {
-    font-size: 1.5rem; /* slightly bigger icons */
-    color: var(--navy); /* match text color */
+    font-size: 1.5rem;
+    color: var(--navy);
     transition: color 0.2s;
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 50%;
-    background: var(--light-bg); /* light background for icons */
+    background: var(--light-bg);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* size of the icon */
-    height: 40px; /* size of the icon */
+    width: 40px;
+    height: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, color 0.3s;
 
-    margin: 0 0.5rem; /* space between icons */
+    margin: 0 0.5rem;
     text-align: center;
-    line-height: 1; /* center the icon vertically */
-    font-size: 1.5rem; /* icon size */
-    font-weight: 600; /* icon weight */
-    color: var(--navy); /* icon color */
-    text-decoration: none; /* remove underline */
-    background: var(--light-bg); /* light background for icons */
-    border-radius: 50%; /* round shape */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow effect */
+    line-height: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    background: var(--light-bg);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     
 
   }
   
   .hero-social-icons a:hover {
-    color: var(--accent-color); /* nice hover color */
+    color: var(--accent-color);
   }
 @media (max-width: 640px) {
     .hero-text {
@@ -565,11 +540,10 @@ footer {
       font-size: 1.8rem;
     }
   }
-  /* Animation for hero social icons */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px); /* move slightly downward */
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -577,7 +551,6 @@ footer {
   }
 }
 
-/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -605,7 +578,6 @@ footer {
     line-height: 1.4;
 }
 
-/* Publication authors styling */
 .pub-authors {
     font-size: 0.85rem;
     color: #666;
@@ -613,7 +585,6 @@ footer {
     font-style: italic;
 }
 
-/* Enhanced publication list styling */
 .pub-list li {
     margin-bottom: 0.8rem;
 }
@@ -623,7 +594,6 @@ footer {
     color: var(--navy);
 }
 
-/* News Section */
 .news-item {
     background: #fff;
     border-left: 3px solid #dc2626;
@@ -657,4 +627,3 @@ footer {
         padding: 1rem;
     }
 }
-
