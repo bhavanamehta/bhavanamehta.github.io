@@ -1,55 +1,253 @@
-<article style="max-width:900px;margin:2rem auto;">
-  <h1>Dissertation</h1>
-  <p style="color: #666; font-size: 0.9rem;">Coming Soon</p>
-  
-  <div style="display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
-    <!-- Slides section -->
-    <div style="flex: 1; min-width: 300px;">
-      <h3>Slides</h3>
-      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #f9f9f9; min-height: 200px; display: flex; align-items: center; justify-content: center;">
-        <div style="text-align: center;">
-          <a href="/assets/slides_dissertation.pdf" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
-            <div style="width: 60px; height: 60px; background: #e63946; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-bottom: 1rem;">PDF</div>
-            <p style="margin: 0; color: #666;">Slides (.pdf)</p>
-          </a>
-        </div>
+<div class="dissertation-container">
+  <header class="dissertation-header">
+    <h1 class="dissertation-title">Dissertation Research</h1>
+    <p class="dissertation-subtitle">Adaptive Fault-Tolerant Sharding for Byzantine Environments</p>
+  </header>
+
+  <section class="document-links">
+    <div class="document-card">
+      <div class="document-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14,2 14,8 20,8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10,9 9,9 8,9"></polyline>
+        </svg>
+      </div>
+      <div class="document-info">
+        <h3>Dissertation Proposal</h3>
+        <p>Complete research proposal with detailed methodology and preliminary results</p>
+        <a href="/assets/proposal_full.pdf" target="_blank" rel="noopener" class="document-link">
+          View Full Proposal →
+        </a>
       </div>
     </div>
-    
-    <!-- Dissertation section -->
-    <div style="flex: 1; min-width: 300px;">
-      <h3>Dissertation</h3>
-      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #f9f9f9; min-height: 200px; display: flex; align-items: center; justify-content: center;">
-        <div style="text-align: center;">
-          <a href="/assets/proposal_full.pdf" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
-            <div style="width: 60px; height: 60px; background: #e63946; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-bottom: 1rem;">PDF</div>
-            <p style="margin: 0; color: #666;">Dissertation (.pdf)</p>
-          </a>
-        </div>
+
+    <div class="document-card">
+      <div class="document-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+      </div>
+      <div class="document-info">
+        <h3>Presentation Slides</h3>
+        <p>Visual overview of key concepts, architecture, and experimental results</p>
+        <a href="/assets/slides_dissertation.pdf" target="_blank" rel="noopener" class="document-link">
+          View Slides →
+        </a>
       </div>
     </div>
-  </div>
-  
-  <div style="margin-top: 2rem;">
+  </section>
+
+  <section class="research-overview">
+    <h2>Research Overview</h2>
+    <div class="research-grid">
+      <div class="research-item">
+        <h3>Problem Statement</h3>
+        <p>Traditional database sharding assumes trusted environments where nodes fail gracefully. In Byzantine environments with adversarial nodes, these assumptions break down, creating unique challenges for distributed system design.</p>
+      </div>
+      <div class="research-item">
+        <h3>Proposed Solution</h3>
+        <p>Marlin introduces adaptive fault-tolerant sharding that dynamically optimizes data distribution for both performance and resilience in Byzantine environments through real-time monitoring and adaptive algorithms.</p>
+      </div>
+      <div class="research-item">
+        <h3>Key Contributions</h3>
+        <p>Novel sharding framework with centralized and decentralized architectures, real-time adaptive algorithms, and comprehensive evaluation demonstrating effectiveness under diverse adversarial scenarios.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="abstract-section">
     <h2>Abstract</h2>
-    <p style="line-height: 1.6; color: #333;">
-      Achieving scalability and reliability in distributed database systems often relies on effective data fragmentation and replication. However, traditional partitioning schemes assume trusted environments where nodes fail gracefully but do not act maliciously. In Byzantine environments, where nodes may behave adversarially, these assumptions no longer hold, presenting unique challenges to system design. This dissertation proposes Marlin, an adaptive fault-tolerant sharding framework designed to address these challenges.
-    </p>
-    <p style="line-height: 1.6; color: #333;">
-      Marlin introduces a dynamic sharding mechanism that optimizes data distribution for performance and fault tolerance in Byzantine environments. Two architectural paradigms are explored: a centralized architecture suited for trusted domains and a decentralized architecture that distributes shard management to eliminate single points of failure. Both designs employ real-time monitoring and adaptive algorithms to adjust sharding dynamically in response to workload patterns and adversarial conditions.
-    </p>
-    <p style="line-height: 1.6; color: #333;">
-      Preliminary evaluations demonstrate Marlin's effectiveness in maintaining high performance and resilience under diverse operational scenarios. By redistributing data adaptively, Marlin mitigates the impact of adversarial attacks, ensuring robust fault tolerance and adaptability to dynamic workloads. This proposal aims to advance the field of distributed systems by offering a scalable and reliable solution tailored for untrusted and adversarial environments.
-    </p>
-  </div>
+    <div class="abstract-content">
+      <p>Achieving scalability and reliability in distributed database systems often relies on effective data fragmentation and replication. However, traditional partitioning schemes assume trusted environments where nodes fail gracefully but do not act maliciously. In Byzantine environments, where nodes may behave adversarially, these assumptions no longer hold, presenting unique challenges to system design. This dissertation proposes Marlin, an adaptive fault-tolerant sharding framework designed to address these challenges.</p>
+      
+      <p>Marlin introduces a dynamic sharding mechanism that optimizes data distribution for performance and fault tolerance in Byzantine environments. Two architectural paradigms are explored: a centralized architecture suited for trusted domains and a decentralized architecture that distributes shard management to eliminate single points of failure. Both designs employ real-time monitoring and adaptive algorithms to adjust sharding dynamically in response to workload patterns and adversarial conditions.</p>
+      
+      <p>Preliminary evaluations demonstrate Marlin's effectiveness in maintaining high performance and resilience under diverse operational scenarios. By redistributing data adaptively, Marlin mitigates the impact of adversarial attacks, ensuring robust fault tolerance and adaptability to dynamic workloads. This proposal aims to advance the field of distributed systems by offering a scalable and reliable solution tailored for untrusted and adversarial environments.</p>
+    </div>
+  </section>
+</div>
+
+<style>
+.dissertation-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dissertation-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.dissertation-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.dissertation-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.document-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.document-card {
+  background: #fff;
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #007bff;
+}
+
+.document-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.document-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.document-info p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.document-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.document-link:hover {
+  color: #0056b3;
+}
+
+.research-overview {
+  margin-bottom: 4rem;
+}
+
+.research-overview h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.research-item {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.research-item h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.research-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.abstract-section {
+  background: #f8f9fa;
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+}
+
+.abstract-section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.abstract-content p {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.abstract-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .dissertation-container {
+    padding: 1rem;
+  }
   
-  <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
-    <p style="color: #666; font-size: 0.9rem;">
-      <strong>Bhavana Mehta</strong><br>
-      [email protected]
-    </p>
-    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
-      Bhavana Mehta is a PhD student working on distributed systems and database research.
-    </p>
-  </div>
-</article>
+  .dissertation-title {
+    font-size: 2rem;
+  }
+  
+  .document-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .document-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
