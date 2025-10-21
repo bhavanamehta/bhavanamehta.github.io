@@ -55,144 +55,196 @@
 
 <style>
 .dissertation-page {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: 1.6;
-  color: #333;
+  padding: 3rem 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.8;
+  color: #2c3e50;
+  font-size: 16px;
 }
 
 .page-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #bdc3c7;
 }
 
 .page-header h1 {
-  font-size: 2.2rem;
-  font-weight: normal;
-  margin: 0 0 0.5rem 0;
-  color: #222;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  letter-spacing: -0.5px;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.3rem;
+  color: #7f8c8d;
   margin: 0;
-  font-style: italic;
+  font-weight: 300;
 }
 
 .documents-section,
 .research-section,
 .abstract-section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .documents-section h2,
 .research-section h2,
 .abstract-section h2 {
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin: 0 0 1.5rem 0;
-  color: #222;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 0.8rem;
 }
 
 .document-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .document-item {
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  background: #fafafa;
+  padding: 2rem;
+  border: 1px solid #d5dbdb;
+  background: #f8f9fa;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.document-item:hover {
+  background: #f1f3f4;
+  border-color: #aed6f1;
 }
 
 .document-item h3 {
-  font-size: 1.1rem;
-  font-weight: normal;
-  margin: 0 0 0.5rem 0;
-  color: #222;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
 }
 
 .document-item p {
-  margin: 0 0 1rem 0;
-  color: #555;
-  font-size: 0.95rem;
+  margin: 0 0 1.5rem 0;
+  color: #5d6d7e;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .download-link {
-  color: #0066cc;
+  color: #2980b9;
   text-decoration: none;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #0066cc;
-  padding-bottom: 1px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
 }
 
 .download-link:hover {
-  color: #004499;
-  border-bottom-color: #004499;
+  color: #1f618d;
+  border-bottom-color: #1f618d;
 }
 
 .research-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
+}
+
+.research-area {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  border-radius: 0 4px 4px 0;
 }
 
 .research-area h3 {
-  font-size: 1.1rem;
-  font-weight: normal;
-  margin: 0 0 1rem 0;
-  color: #222;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0 0 1.2rem 0;
+  color: #2c3e50;
 }
 
 .research-area p {
   margin: 0;
-  color: #444;
-  text-align: justify;
+  color: #5d6d7e;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 .abstract-section {
-  background: #f9f9f9;
-  padding: 2rem;
-  border: 1px solid #ddd;
+  background: #f8f9fa;
+  padding: 3rem;
+  border: 1px solid #d5dbdb;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .abstract-text p {
-  margin: 0 0 1.5rem 0;
-  text-align: justify;
-  color: #333;
+  margin: 0 0 2rem 0;
+  color: #2c3e50;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: left;
 }
 
 .abstract-text p:last-child {
   margin-bottom: 0;
 }
 
+/* Better spacing for readability */
+.documents-section {
+  margin-top: 2rem;
+}
+
+.research-section {
+  margin-top: 3rem;
+}
+
+.abstract-section {
+  margin-top: 3rem;
+}
+
 @media (max-width: 768px) {
   .dissertation-page {
-    padding: 1rem 0.5rem;
+    padding: 2rem 1rem;
+    font-size: 15px;
   }
   
   .page-header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
   }
   
   .document-list {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .document-item {
-    padding: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .research-area {
+    padding: 1.5rem;
   }
   
   .abstract-section {
-    padding: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .documents-section h2,
+  .research-section h2,
+  .abstract-section h2 {
+    font-size: 1.4rem;
   }
 }
 </style>
