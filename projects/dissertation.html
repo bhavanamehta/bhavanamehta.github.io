@@ -1,29 +1,38 @@
----
-layout: default
-title: Dissertation Slide
-permalink: /projects/dissertation.html
----
-<link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
-
 <article style="max-width:900px;margin:2rem auto;">
-  <h1>Dissertation — Slide</h1>
-  <p>View the single-page slide embedded below. Use the download link to download the merged dissertation PDF.</p>
-
-  <div style="margin:1.2rem 0;">
-    <!-- Embedded PDF view; browsers vary in PDF rendering -->
-    <object data="{{ '/assets/Dissertation-2-with-slide.pdf' | relative_url }}" type="application/pdf" width="100%" height="800">
-      <!-- Fallback: link to the merged PDF and original PDF -->
-      <p>Your browser does not support embedding PDFs. Download the file instead:
-        <a href="{{ '/assets/Dissertation-2-with-slide.pdf' | relative_url }}">Download merged dissertation (with slide)</a>
-        or
-        <a href="{{ '/assets/Dissertation-2.pdf' | relative_url }}">Download original slide PDF</a>
-      </p>
-    </object>
+  <h1>Dissertation</h1>
+  <p style="color: #666; font-size: 0.9rem;">Coming Soon</p>
+  
+  <div style="display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;">
+    <!-- Slides section -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3>Slides</h3>
+      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #f9f9f9; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e63946; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-bottom: 1rem;">PDF</div>
+          <p style="margin: 0; color: #666;">Slides (.pdf)</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Dissertation section -->
+    <div style="flex: 1; min-width: 300px;">
+      <h3>Dissertation</h3>
+      <div style="border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #f9f9f9; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center;">
+          <div style="width: 60px; height: 60px; background: #e63946; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-bottom: 1rem;">PDF</div>
+          <p style="margin: 0; color: #666;">Dissertation (.pdf)</p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <p>
-    <a class="project-link" href="{{ '/assets/Dissertation-2-with-slide.pdf' | relative_url }}" download>Download merged dissertation (with slide)</a>
-    &nbsp;•&nbsp;
-    <a class="project-link" href="{{ '/assets/Dissertation-2.pdf' | relative_url }}" target="_blank" rel="noopener">Open single-page slide PDF</a>
-  </p>
+  
+  <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+    <p style="color: #666; font-size: 0.9rem;">
+      <strong>Bhavana Mehta</strong><br>
+      [email protected]
+    </p>
+    <p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">
+      Bhavana Mehta is a PhD student working on distributed systems and database research.
+    </p>
+  </div>
 </article>
