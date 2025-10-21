@@ -20,7 +20,15 @@
     
     <div style="margin: 2rem 0;">
       <h3>Dissertation Slides</h3>
-      <div style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white;">
+      <div style="margin-bottom: 1rem;">
+        <button onclick="toggleFullscreen('slides')" style="background: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">
+          📖 View Full Screen
+        </button>
+        <a href="../assets/slides_dissertation.pdf" target="_blank" style="margin-left: 10px; color: #007bff; text-decoration: none; font-size: 14px;">
+          📥 Download PDF
+        </a>
+      </div>
+      <div id="slides-container" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white;">
         <object data="../assets/slides_dissertation.pdf" type="application/pdf" width="100%" height="600" style="display: block;">
           <p>Your browser does not support PDFs. <a href="../assets/slides_dissertation.pdf" target="_blank">Download the slides</a> instead.</p>
         </object>
@@ -29,13 +37,76 @@
 
     <div style="margin: 2rem 0;">
       <h3>Dissertation Proposal</h3>
-      <div style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white;">
+      <div style="margin-bottom: 1rem;">
+        <button onclick="toggleFullscreen('proposal')" style="background: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px;">
+          📖 View Full Screen
+        </button>
+        <a href="../assets/proposal_full.pdf" target="_blank" style="margin-left: 10px; color: #007bff; text-decoration: none; font-size: 14px;">
+          📥 Download PDF
+        </a>
+      </div>
+      <div id="proposal-container" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; background: white;">
         <object data="../assets/proposal_full.pdf" type="application/pdf" width="100%" height="600" style="display: block;">
           <p>Your browser does not support PDFs. <a href="../assets/proposal_full.pdf" target="_blank">Download the proposal</a> instead.</p>
         </object>
       </div>
     </div>
   </div>
+
+  <script>
+    function toggleFullscreen(pdfType) {
+      const container = document.getElementById(pdfType + '-container');
+      const button = event.target;
+      
+      if (container.style.position === 'fixed') {
+        // Exit fullscreen
+        container.style.position = 'relative';
+        container.style.top = 'auto';
+        container.style.left = 'auto';
+        container.style.width = '100%';
+        container.style.height = '600px';
+        container.style.zIndex = 'auto';
+        container.style.backgroundColor = 'white';
+        container.style.borderRadius = '8px';
+        button.textContent = '📖 View Full Screen';
+        button.style.background = '#007bff';
+      } else {
+        // Enter fullscreen
+        container.style.position = 'fixed';
+        container.style.top = '0';
+        container.style.left = '0';
+        container.style.width = '100vw';
+        container.style.height = '100vh';
+        container.style.zIndex = '9999';
+        container.style.backgroundColor = '#000';
+        container.style.borderRadius = '0';
+        button.textContent = '✕ Exit Full Screen';
+        button.style.background = '#dc3545';
+      }
+    }
+
+    // Close fullscreen when clicking outside
+    document.addEventListener('click', function(e) {
+      if (e.target.id === 'slides-container' || e.target.id === 'proposal-container') {
+        const container = e.target;
+        if (container.style.position === 'fixed') {
+          const button = container.previousElementSibling.querySelector('button');
+          button.click();
+        }
+      }
+    });
+
+    // Close fullscreen with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const fullscreenContainers = document.querySelectorAll('[style*="position: fixed"]');
+        fullscreenContainers.forEach(container => {
+          const button = container.previousElementSibling.querySelector('button');
+          if (button) button.click();
+        });
+      }
+    });
+  </script>
   
 
   </div>
