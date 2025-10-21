@@ -26,6 +26,19 @@
     </div>
   </div>
   
+  <div style="margin-top: 2rem;">
+    <h2>Abstract</h2>
+    <p style="line-height: 1.6; color: #333;">
+      Achieving scalability and reliability in distributed database systems often relies on effective data fragmentation and replication. However, traditional partitioning schemes assume trusted environments where nodes fail gracefully but do not act maliciously. In Byzantine environments, where nodes may behave adversarially, these assumptions no longer hold, presenting unique challenges to system design. This dissertation proposes Marlin, an adaptive fault-tolerant sharding framework designed to address these challenges.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      Marlin introduces a dynamic sharding mechanism that optimizes data distribution for performance and fault tolerance in Byzantine environments. Two architectural paradigms are explored: a centralized architecture suited for trusted domains and a decentralized architecture that distributes shard management to eliminate single points of failure. Both designs employ real-time monitoring and adaptive algorithms to adjust sharding dynamically in response to workload patterns and adversarial conditions.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      Preliminary evaluations demonstrate Marlin's effectiveness in maintaining high performance and resilience under diverse operational scenarios. By redistributing data adaptively, Marlin mitigates the impact of adversarial attacks, ensuring robust fault tolerance and adaptability to dynamic workloads. This proposal aims to advance the field of distributed systems by offering a scalable and reliable solution tailored for untrusted and adversarial environments.
+    </p>
+  </div>
+  
   <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
     <p style="color: #666; font-size: 0.9rem;">
       <strong>Bhavana Mehta</strong><br>
