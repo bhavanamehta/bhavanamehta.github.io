@@ -1,0 +1,23 @@
+<article class="project-card">
+  <a class="project-link" href="{{ include.project.url }}" target="_blank" rel="noopener">
+    <div class="project-thumb">
+      {% if include.project.thumb and include.project.thumb != "" %}
+        <img src="{{ include.project.thumb }}" alt="{{ include.project.title }}">
+      {% else %}
+        <div class="pdf-icon">PDF</div>
+      {% endif %}
+    </div>
+
+    <div class="project-body">
+      <h3 class="project-title">{{ include.project.title }}</h3>
+      <p class="project-desc">{{ include.project.description }}</p>
+      {% if include.project.tags %}
+      <p class="project-tags">
+        {% for tag in include.project.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+  </a>
+</article>

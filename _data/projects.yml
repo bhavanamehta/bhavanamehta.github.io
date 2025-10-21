@@ -1,0 +1,19 @@
+# One entry per project. Replace or add thumbs as desired.
+
+- title: "Dissertation — Slide"
+  description: "A single-page slide for my dissertation — view inline or download."
+  # link goes to an in-site project page which embeds the PDF
+  url: "/projects/dissertation.html"
+  thumb: "/assets/img/projects/dissertation-thumb.png"
+  tags:
+    - research
+    - pdf
+
+# Example project entry (edit or remove)
+- title: "Example Project"
+  description: "Short description for this project."
+  url: "https://github.com/youruser/example"
+  thumb: "/assets/img/projects/example-thumb.png"
+  tags:
+    - web
+    - code
