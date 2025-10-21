@@ -1,15 +1,13 @@
-# One entry per project. Replace or add thumbs as desired.
-
+# Add one YAML entry per project. Thumbs should be paths under /assets/img/... or any URL.
 - title: "Dissertation — Slide"
-  description: "A single-page slide for my dissertation — view inline or download."
-  # link goes to an in-site project page which embeds the PDF
-  url: "/projects/dissertation.html"
+  description: "A single-page slide for my dissertation (PDF). Click to view or download."
+  url: "/assets/Dissertation-2.pdf"
   thumb: "/assets/img/projects/dissertation-thumb.png"
   tags:
     - research
     - pdf
 
-# Example project entry (edit or remove)
+# Example extra project entry (duplicate and edit as needed)
 - title: "Example Project"
   description: "Short description for this project."
   url: "https://github.com/youruser/example"

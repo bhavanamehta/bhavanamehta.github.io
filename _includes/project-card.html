@@ -1,9 +1,10 @@
 <article class="project-card">
   <a class="project-link" href="{{ include.project.url }}" target="_blank" rel="noopener">
     <div class="project-thumb">
-      {% if include.project.thumb and include.project.thumb != "" %}
+      {% if include.project.thumb %}
         <img src="{{ include.project.thumb }}" alt="{{ include.project.title }}">
       {% else %}
+        <!-- fallback PDF icon -->
         <div class="pdf-icon">PDF</div>
       {% endif %}
     </div>
