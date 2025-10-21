@@ -1,23 +1,34 @@
 <article style="max-width:900px;margin:2rem auto;">
-  <h1>AdaChain: Contextual-Bandit Runtime</h1>
-  <p class="project-meta">Machine Learning • Blockchain • Adaptive Systems</p>
+  <h1>AdaChain: A Learned Adaptive Blockchain</h1>
   
-  <div class="project-content">
-    <h2>Overview</h2>
-    <p>AdaChain is a contextual-bandit runtime system that dynamically switches transaction paradigms per workload episode, enabling adaptive blockchain systems that can optimize for different types of workloads.</p>
+  <div style="margin-top: 2rem;">
+    <h2>Abstract</h2>
+    <p style="line-height: 1.6; color: #333;">
+      This paper presents AdaChain, a learning-based blockchain framework that adaptively chooses the best permissioned blockchain architecture to optimize effective throughput for dynamic transaction workloads. AdaChain addresses the challenge in Blockchain-as-a-Service (BaaS) environments, where a large variety of possible smart contracts are deployed with different workload characteristics.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      AdaChain supports automatically adapting to an underlying, dynamically changing workload through the use of reinforcement learning. When a promising architecture is identified, AdaChain switches from the current architecture to the promising one at runtime in a secure and correct manner.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      Experimentally, we show that AdaChain can converge quickly to optimal architectures under changing workloads and significantly outperform fixed architectures in terms of the number of successfully committed transactions, all while incurring low additional overhead.
+    </p>
+  </div>
+
+  <div style="margin-top: 3rem;">
+    <div style="margin: 2rem 0;">
+      <p style="margin: 0.5rem 0;">
+        <a href="https://dl.acm.org/doi/abs/10.14778/3594512.3594531" style="color: #007bff; text-decoration: none; font-size: 24px; font-weight: 600;" target="_blank">
+          Paper (VLDB)
+        </a>
+      </p>
+    </div>
     
-    <h2>Key Features</h2>
-    <ul>
-      <li>Contextual bandit algorithms for runtime adaptation</li>
-      <li>Dynamic transaction paradigm switching</li>
-      <li>Workload-aware optimization</li>
-      <li>Machine learning-driven decision making</li>
-    </ul>
-    
-    <h2>Technical Details</h2>
-    <p>This system uses contextual bandit algorithms to learn optimal transaction processing strategies based on current workload characteristics. The runtime can switch between different transaction paradigms (e.g., optimistic vs. pessimistic concurrency control) to maximize performance.</p>
-    
-    <h2>Research Impact</h2>
-    <p>AdaChain demonstrates how machine learning techniques can be applied to blockchain systems to create more adaptive and efficient distributed ledgers that can optimize their behavior based on observed workload patterns.</p>
+    <div style="margin: 2rem 0;">
+      <p style="margin: 0.5rem 0;">
+        <a href="https://github.com/chenyuanwu/AdaChain" style="color: #007bff; text-decoration: none; font-size: 24px; font-weight: 600;" target="_blank">
+          Code (GitHub)
+        </a>
+      </p>
+    </div>
   </div>
 </article>
