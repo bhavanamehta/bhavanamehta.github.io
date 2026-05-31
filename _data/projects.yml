@@ -1,4 +1,14 @@
 # Research Projects
+- title: "LLM Inference Performance"
+  description: "AMD MI355X inference benchmarking, GPU systems reliability, training control-plane infrastructure, and checkpoint recovery."
+  url: "/projects/inference.html"
+  thumb: "/assets/img/projects/inference-thumb.png"
+  tags:
+    - llm-inference
+    - machine-learning
+    - performance
+    - infrastructure
+
 - title: "Marlin: Adaptive Sharded Database"
   description: "Adaptive sharded database tolerant to Byzantine faults with hypergraph-guided resharding."
   url: "/projects/marlin.html"

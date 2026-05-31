@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Bhavana Mehta</title>
-  <meta name="description" content="Research projects by Bhavana Mehta in ML infrastructure, adaptive distributed systems, fault-tolerant databases, and performance engineering.">
+  <meta name="description" content="Projects by Bhavana Mehta in LLM inference, distributed training, ML infrastructure, adaptive systems, and performance engineering.">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <link rel="stylesheet" href="assets/css/projects.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
@@ -28,10 +28,25 @@
 <main class="wrap" style="margin-top: 80px;">
   <section class="projects-intro">
     <h1>Research Projects</h1>
-    <p>Selected research work in adaptive distributed systems, machine learning for infrastructure, fault-tolerant databases, and performance engineering. Click a card to view project details.</p>
+    <p>Selected work in LLM inference, distributed training infrastructure, ML-driven adaptive systems, and performance engineering. Click a card to view project details.</p>
   </section>
 
   <section class="projects-grid">
+    <article class="project-card">
+      <a class="project-link" href="projects/inference.html">
+        <div class="project-thumb">
+          <div class="project-icon inference-icon">
+            <i class="fa fa-bolt" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">LLM Inference Performance</h3>
+          <p class="project-date">2025-2026</p>
+          <p class="project-desc">AMD MI355X inference benchmarking, GPU systems reliability, training control-plane infrastructure, and checkpoint recovery.</p>
+        </div>
+      </a>
+    </article>
+
     <article class="project-card">
       <a class="project-link" href="projects/marlin.html">
         <div class="project-thumb">
@@ -88,7 +103,6 @@
           <h3 class="project-title">Dissertation Proposal</h3>
           <p class="project-date">2025</p>
           <p class="project-desc">On-going work for my dissertation.</p>
-          </p>
         </div>
       </a>
     </article>
@@ -112,6 +126,8 @@
   font-weight: 600;
 }
 
+.projects-grid { flex-wrap: wrap; }
+
 .project-icon {
   display: inline-flex;
   align-items: center;
@@ -129,6 +145,10 @@
 .project-card:hover .project-icon {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.inference-icon {
+  background: linear-gradient(135deg, #1f7a8c 0%, #60c2a4 100%);
 }
 
 .marlin-icon {

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume - Bhavana Mehta</title>
-  <meta name="description" content="Resume of Bhavana Mehta, Member of Technical Staff at Zyphra working on ML infrastructure, distributed systems, and performance engineering.">
+  <meta name="description" content="Resume of Bhavana Mehta, Member of Technical Staff at Zyphra working on ML training infrastructure, GPU systems reliability, LLM inference optimization, and performance engineering.">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Lora:400,700" rel="stylesheet">
 </head>
@@ -25,11 +25,139 @@
   </nav>
 
   <div class="strip big" style="margin-top: 55px;">
-    <strong>Resume</strong> - ML infrastructure, distributed systems, and performance engineering. <a href="mailto:bhavanamehta5@gmail.com" style="color: white; text-decoration: underline;">Contact me</a>
+    <strong>Resume</strong> - ML training infrastructure, GPU systems reliability, LLM inference, and performance engineering. <a href="mailto:bhavanamehta5@gmail.com" style="color: white; text-decoration: underline;">Contact me</a>
   </div>
 
-  <main class="wrap">
-    <embed src="assets/Bhavana_Mehta_Resume.pdf" type="application/pdf" width="100%" height="800px" />
+  <main class="wrap" style="padding-top: 30px;">
+    <section>
+      <h1>Resume</h1>
+      <p>
+        Current focus: ML training control planes, distributed checkpointing and recovery, GPU systems reliability, AMD GPU inference benchmarking, and performance engineering for large-model training and serving.
+      </p>
+      <p>
+        <a class="btn-small" href="assets/Bhavana_Mehta_Resume.pdf" target="_blank" rel="noopener">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF Resume
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>University of Pennsylvania</h3>
+          <p class="date">2019 - 2025</p>
+        </div>
+        <p class="place">Ph.D. &amp; M.S. in Computer and Information Science</p>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Nirma Institute of Technology</h3>
+          <p class="date">2014 - 2018</p>
+        </div>
+        <p class="place">B.Tech., Electronics &amp; Communication Engineering</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Zyphra</h3>
+          <p class="date">Dec 2025 - Present</p>
+        </div>
+        <p class="place">Member of Technical Staff, Performance Engineering</p>
+        <ul>
+          <li><strong>ML Training Control Plane:</strong> Built and operated Zookeeper, Zyphra's internal control plane for large-scale LLM training on AMD GPU clusters, enabling Slack-native job controls, automated rekicks, checkpoint sync management, node exclusion workflows, and real-time operator intervention during active training runs.</li>
+          <li><strong>Distributed Checkpointing and Training Recovery:</strong> Designed recovery systems for failure-prone multi-node training, including pairwise NVMe checkpoint replication, failed-node replacement workflows, and object-store checkpoint repair.</li>
+          <li><strong>GPU Systems Reliability and Root-Cause Analysis:</strong> Diagnosed reliability-critical failures across AMD GPU training environments, including ROCm/HIP memory anomalies, Prometheus storage incidents, monitoring regressions, and cluster-level storage failures.</li>
+          <li><strong>MI355X Inference Optimization and Benchmarking:</strong> Contributed to AMD MI355X inference benchmarking and full-stack optimization across TTFT, output throughput, kernel behavior, RCCL/HIP stack performance, communication patterns, and high-throughput serving metrics.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>University of Pennsylvania</h3>
+          <p class="date">2019 - 2025</p>
+        </div>
+        <p class="place">Research Fellow, Distributed Systems Lab</p>
+        <ul>
+          <li><strong>AdaChain:</strong> Built a reinforcement-learning/contextual-bandit framework for adaptive blockchain execution, including ledger-state featurization, online model training, and decentralized architecture switching.</li>
+          <li><strong>Marlin:</strong> Led adaptive sharding for untrusted distributed systems, using KaHyPar-based graph partitioning and decentralized consensus protocols to improve throughput by <strong>over 40%</strong> under adversarial skew.</li>
+          <li><strong>Fault-Tolerant Systems:</strong> Designed health monitoring and state replication for 70B+ LLM serving failover, and built a DPDK-based live TCP migration prototype with Microsoft Research/MIT, achieving about 4 microseconds migration latency and a <strong>12x improvement</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Bluespec Inc.</h3>
+          <p class="date">2018 - 2019</p>
+        </div>
+        <p class="place">Design Engineer (prev. Intern)</p>
+        <ul>
+          <li>Tuned a RISC-V CPU pipeline and branch predictor using statistical modeling for compute-intensive workloads, improving IPC by <strong>25%</strong>; concurrently built a Jenkins/Docker-based CI/CD pipeline that reduced hardware release cycles from two weeks to three days.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>IIT Madras, RISE Lab</h3>
+          <p class="date">Summer 2017</p>
+        </div>
+        <p class="place">Research Intern</p>
+        <ul>
+          <li>Designed a novel SRT Radix 4 algorithm for high-speed division that was integrated into India's first open-source RISC-V processor, SHAKTI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <strong>ZAYA1-8B Technical Report</strong>
+          <span class="pub-venue">arXiv, May 2026</span>
+          <div class="pub-authors">Bhavana Mehta et al. (in collaboration with Zyphra)</div>
+        </li>
+        <li>
+          <strong>Adaptive Sharding in Untrusted Environments</strong>
+          <span class="pub-venue">SIGMOD '26</span>
+          <div class="pub-authors">Bhavana Mehta, Nupur Baghel, Mohammad J Amiri, Ryan Marcus, Boon Thau Loo</div>
+        </li>
+        <li>
+          <strong>Towards Full Stack Adaptivity in Permissioned Blockchains</strong>
+          <span class="pub-venue">VLDB '24</span>
+          <div class="pub-authors">Chenyuan Wu, Mohammad J Amiri, Haoyun Qin, Bhavana Mehta, Ryan Marcus, Boon Thau Loo</div>
+        </li>
+        <li>
+          <strong>Towards Adaptive Fault-Tolerant Sharded Databases</strong>
+          <span class="pub-venue">VLDB '23</span>
+          <div class="pub-authors">Bhavana Mehta, Neelesh C A, Prashanth Iyer, Mohammad J Amiri, Boon Thau Loo, Ryan Marcus</div>
+        </li>
+        <li>
+          <strong>AdaChain: A Learned Adaptive Blockchain</strong>
+          <span class="pub-venue">VLDB '23</span>
+          <div class="pub-authors">Chenyuan Wu, Bhavana Mehta, Mohammad J Amiri, Ryan Marcus, Boon Thau Loo</div>
+        </li>
+        <li>
+          <strong>Human Action Recognition using Good Features and Multilayer Perceptron Network</strong>
+          <span class="pub-venue">ICCSP '17</span>
+          <div class="pub-authors">J. Talukdar, Bhavana Mehta</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python, C++/C, SQL, Bash</li>
+        <li><strong>Machine Learning:</strong> Reinforcement learning, contextual bandits, PyTorch, Scikit-learn</li>
+        <li><strong>Distributed Systems:</strong> Raft/Paxos, PBFT/HotStuff, 2PC, Redis, KaHyPar, YCSB</li>
+        <li><strong>ML Infrastructure:</strong> Distributed training orchestration, checkpoint validation and recovery, Slurm, NFS/NVMe, Prometheus, Backblaze B2, vLLM, Perfetto</li>
+        <li><strong>Systems and DevOps:</strong> Linux, Docker, Git, Jenkins, CI/CD, HPC, CloudLab, performance optimization</li>
+        <li><strong>Networking:</strong> DPDK, kernel bypass, low-latency networking</li>
+      </ul>
+    </section>
   </main>
 
   <footer>

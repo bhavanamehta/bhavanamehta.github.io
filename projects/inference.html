@@ -1,0 +1,28 @@
+<article style="max-width:900px;margin:2rem auto;">
+  <h1>LLM Inference Performance</h1>
+
+  <div style="margin-top: 2rem;">
+    <h2>Overview</h2>
+    <p style="line-height: 1.6; color: #333;">
+      My current work at Zyphra focuses on inference performance and ML infrastructure for large models, especially AMD GPU training and serving environments. The work combines training control-plane systems, checkpoint recovery, GPU systems debugging, benchmark design, and production reliability.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      I contributed to AMD MI355X inference benchmarking and full-stack optimization, characterizing TTFT, output throughput, kernel behavior, RCCL/HIP stack performance, communication patterns, and high-throughput serving metrics across large-model inference workloads.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+      Adjacent work includes Zookeeper, Zyphra's internal control plane for large-scale LLM training, plus distributed checkpoint recovery systems for pairwise NVMe replication, failed-node replacement, object-store checkpoint repair, and operational workflows for Slurm, Prometheus, NFS/NVMe, and GPU cluster storage pressure.
+    </p>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <h2>Technical Areas</h2>
+    <ul style="line-height: 1.7; color: #333;">
+      <li>AMD MI355X inference benchmarking</li>
+      <li>TTFT, output-throughput, and serving-metric analysis</li>
+      <li>Kernel behavior, RCCL/HIP stack performance, and communication-pattern analysis</li>
+      <li>GPU systems reliability and root-cause analysis</li>
+      <li>Distributed checkpoint validation and recovery</li>
+      <li>Slurm, Prometheus, NFS/NVMe, and object-store-backed infrastructure</li>
+    </ul>
+  </div>
+</article>
